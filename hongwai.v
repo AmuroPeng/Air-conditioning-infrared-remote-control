@@ -93,11 +93,10 @@ always @(posedge clk or negedge rst_n)
                             zero_en <= 0;
                             one_en <= 0;
                             connect_en <= 0;
-                            sendover <= 0; 
-                            shiftdata <= 0;
-                            i <= 0;
-                            DATA <= 8'd0;
-                            
+                            data35_over <= 0;
+                            data32_over <= 0;
+                            i <= 35;//给data35来用
+                            led <= 0;//熄灭一盏小灯
                             if(key_1)
                                 begin
                                     state <= START;    
@@ -122,25 +121,66 @@ always @(posedge clk or negedge rst_n)
                         begin
                             if(data35_over)
                                 begin  
-                                    i <= 32;    //给data_32来用
+                                    i <= 32;    //给data32来用
                                     one_en <= 0;
                                     zero_en <= 0;
+                                    state <= CONNECT
                                 end
                             else 
                                 begin
                                     if(zero_over||one_over)   //1bit发送结束
                                         begin
                                             i <= i - 1; //减少一位
-                                            if (i==0) 
-                                                begin
-                                                    data35_over=0;
-                                                    i=32;//用于data32计数
-                                                end
+                                            if (i==0) //是否到了最后一位
+                                                data35_over=1;
                                             one_en <= 0;
                                             zero_en <= 0;
                                         end
                                     else if(data35[i]) one_en <= 1; 
                                     else if(!data35[i]) zero_en <= 1;
+                                    // else 
+                                    //     begin
+                                    //         i <= i ;
+                                    //         one_en <= one_en;
+                                    //         zero_en <= zero_en;
+                                    //     end  
+                                end
+                        end
+                    CONNECT:  //发送连接码
+                        begin
+                            if(connect_over)    
+                                begin                                         
+                                    connect_en <= 0;
+                                    state <= SEND_32;   
+                                end
+                            else 
+                                begin
+                                    connect_en <= 1;
+                                    state <= CONNECT;     
+                                end     
+                        end
+                    SEND_32:    //发送32位数据码
+                        begin
+                            if(data32_over)
+                                begin  
+                                    i <= 35;    //给data35来用
+                                    one_en <= 0;
+                                    zero_en <= 0;
+                                    state <= IDEL;
+                                end
+                            else 
+                                begin
+                                    if(zero_over||one_over)   //1bit发送结束
+                                        begin
+                                            i <= i - 1; //减少一位
+                                            if (i==0) //是否到了最后一位
+                                              data32_over=1;
+                                            one_en <= 0;
+                                            zero_en <= 0;
+                                            led <= 1;//点亮一盏小灯
+                                        end
+                                    else if(data32[i]) one_en <= 1; 
+                                    else if(!data32[i]) zero_en <= 1;
                                     // else 
                                     //     begin
                                     //         i <= i ;
