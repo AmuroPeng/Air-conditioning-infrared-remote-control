@@ -1,11 +1,15 @@
-module hongwai(clk,rst,key_1,data35,data32,clk_38k,led);
+module hongwai(clk,rst,key_1,IR_in_data35,IR_in_data32,IR_out,led);
 input clk;
 input rst;
 input key_1; //开关
-input [34:0] data35;
-input [31:0] data32;
-output clk_38k;
+input [34:0] IR_in_data35;
+input [31:0] IR_in_data32;
+output IR_out;
 output led; //完全输出一条指令后让led亮一次
+
+reg [34:0] data35;
+reg [31:0] data32;
+reg [31:0] data32temp;
 
 parameter t_38k    = 10'd3288;
 parameter t_38k_half = 10'd1644;
@@ -20,6 +24,7 @@ parameter t_1500us = 16'd150000;
 parameter t_1200us = 16'd120000;
 parameter t_2250us = 16'd225000;
 这里的二进制数位是错的
+
 
 //38k分频----------------------------------------------//
 reg  [10:0]   cnt1;
@@ -40,19 +45,13 @@ always @(posedge clk or negedge rst)
 //38k分频----------------------------------------------//
 
 //状态机发送----------------------------------------------//
-reg 
-always @(posedge clk or negedge rst)
-    begin
-        if(rst)
-            写点什么
-        else if 
-    end
+
 //状态机发送----------------------------------------------//
 parameter  IDEL       = 3'D0;        //初始化状态，等待发送命令
 parameter  START      = 3'D1;        //开始发送起始码 
-parameter  SEND_35  = 3'D2;        //发送35位数据码
-parameter  CONNECT= 3'D3;        //发送连接码
-parameter  SEND_32  = 3'D4;        //发送32位数据码
+parameter  SEND_35    = 3'D2;        //发送35位数据码
+parameter  CONNECT    = 3'D3;        //发送连接码
+parameter  SEND_32    = 3'D4;        //发送32位数据码
 // parameter  SEND_UNDATA= 3'D5;        //发送数据反码
 // parameter  FINISH     = 3'D6;        //发送结束码
 // parameter  FINISH_1   = 3'D7;        //发送结束
@@ -60,11 +59,12 @@ reg   [2:0]     state;
 reg             start_en;//起始_使能
 wire            start_over;//起始码是否发送结束
 reg             zero_en;
-wire            zero_over;
+wire            zero_over;//这些判断是否结束的变量虽然存在于always语句里，但是值并没有修改只是用于判断，所以wire型没的毛病
 reg             one_en;
 wire            one_over;
 reg             connect_en;
 wire            connect_over;
+reg             kaiguan;
 
 reg   [3:0]     i;//记录数据目前的位数
 
@@ -81,8 +81,7 @@ always @(posedge clk or negedge rst_n)
                 shiftdata <= 0; 
                 i <= 35; //给data35来用
                 DATA <= 8'D0;
-                led_1 <= 1;
-                led_2 <= 1; 
+                kaiguan <= 1;
             end                   
         else 
             begin
@@ -97,12 +96,17 @@ always @(posedge clk or negedge rst_n)
                             data32_over <= 0;
                             i <= 35;//给data35来用
                             led <= 0;//熄灭一盏小灯
-                            if(key_1)
+                            if(key_1)//关机
                                 begin
                                     state <= START;    
-                                    DATA <= 8'd1;
+                                    data35 <= 35'b10000010000100000000010000001010010;
+                                    data32 <= 32'b00001000000001000000000000000110;
                                 end
-                            else state <= IDEL;
+                            else if(data32temp != data32)//两者一致说明没有新指令传入，不一样则说明需要进行调制并输出了
+                                data35 <= IR_in_data35;
+                                data32 <= IR_in_data32;
+                                state <= START;
+                            else state <= IDEL;//平时一直在IDEL状态里呆着
                          end
                     START:  //发送起始码
                         begin
@@ -166,6 +170,7 @@ always @(posedge clk or negedge rst_n)
                                     i <= 35;    //给data35来用
                                     one_en <= 0;
                                     zero_en <= 0;
+                                    data32temp <= data32;//将传送后的值记录下来，在IDEL状态不断进行判断
                                     state <= IDEL;
                                 end
                             else 
