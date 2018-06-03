@@ -1,12 +1,13 @@
-module hongwai(clk,rst,key_1,IR_in_data35,IR_in_data32,IR_out,led);
+module hongwai(clk,rst,key_1,IR_in_data35,IR_in_data32,IR_out,led_out);
 input clk;
 input rst;
 input key_1; //开关
 input [34:0] IR_in_data35;
 input [31:0] IR_in_data32;
 output IR_out;
-output led; //完全输出一条指令后让led亮一次
+output led_out; //完全输出一条指令后让led亮一次
 
+reg led;
 reg [34:0] data35;
 reg [31:0] data32;
 reg [31:0] data32temp;
@@ -23,11 +24,11 @@ parameter t_450us = 16'd45000;
 parameter t_1500us = 16'd150000;
 parameter t_1200us = 16'd120000;
 parameter t_2250us = 16'd225000;
-这里的二进制数位是错的
+// 这里的二进制数位是错的
 
 
 //38k分频----------------------------------------------//
-reg  [10:0]   cnt1;
+reg  [10:0] cnt1;
 reg  clk_38k;
 always @(posedge clk or negedge rst)
     begin
@@ -64,28 +65,30 @@ reg             one_en;
 wire            one_over;
 reg             connect_en;
 wire            connect_over;
-reg             kaiguan;
+reg             data35_over;
+reg             data32_over;
+// reg             kaiguan;
 
 reg   [3:0]     i;//记录数据目前的位数
 
-always @(posedge clk or negedge rst_n)
+always @(posedge clk or negedge rst)
     begin
-        if(!rst_n)
+        if(!rst)
             begin
                 state <= IDEL;
                 start_en <= 0;
                 zero_en <= 0;
                 one_en <= 0;
                 connect_en <= 0;
-                sendover <= 0;
-                shiftdata <= 0; 
+                // sendover <= 0;
+                // shiftdata <= 0; 
                 i <= 35; //给data35来用
-                DATA <= 8'D0;
-                kaiguan <= 1;
+                // DATA <= 8'D0;
+                // kaiguan <= 1;
             end                   
         else 
             begin
-               case(state)
+                case(state)
                     IDEL:
                         begin
                             start_en <= 0;
@@ -102,12 +105,17 @@ always @(posedge clk or negedge rst_n)
                                     data35 <= 35'b10000010000100000000010000001010010;
                                     data32 <= 32'b00001000000001000000000000000110;
                                 end
-                            else if(data32temp != data32)//两者一致说明没有新指令传入，不一样则说明需要进行调制并输出了
-                                data35 <= IR_in_data35;
-                                data32 <= IR_in_data32;
-                                state <= START;
-                            else state <= IDEL;//平时一直在IDEL状态里呆着
-                         end
+                            else 
+                                begin
+                                    if(data32temp != data32)//两者一致说明没有新指令传入，不一样则说明需要进行调制并输出了
+                                        begin//好气哦忘记加begin&end了，之后的else老报错 debug半天T_T
+                                            data35 <= IR_in_data35;
+                                            data32 <= IR_in_data32;
+                                            state <= START;
+                                        end
+                                    else state <= IDEL;//平时一直在IDEL状态里呆着
+                                end
+                        end
                     START:  //发送起始码
                         begin
                             if(start_over)    
@@ -128,7 +136,7 @@ always @(posedge clk or negedge rst_n)
                                     i <= 32;    //给data32来用
                                     one_en <= 0;
                                     zero_en <= 0;
-                                    state <= CONNECT
+                                    state <= CONNECT;
                                 end
                             else 
                                 begin
@@ -136,7 +144,7 @@ always @(posedge clk or negedge rst_n)
                                         begin
                                             i <= i - 1; //减少一位
                                             if (i==0) //是否到了最后一位
-                                                data35_over=1;
+                                                data35_over <= 1;
                                             one_en <= 0;
                                             zero_en <= 0;
                                         end
@@ -179,7 +187,7 @@ always @(posedge clk or negedge rst_n)
                                         begin
                                             i <= i - 1; //减少一位
                                             if (i==0) //是否到了最后一位
-                                              data32_over=1;
+                                                data32_over <= 1;
                                             one_en <= 0;
                                             zero_en <= 0;
                                             led <= 1;//点亮一盏小灯
@@ -194,16 +202,16 @@ always @(posedge clk or negedge rst_n)
                                     //     end  
                                 end
                         end
-
-
+                    default: state <= IDEL;
+                endcase
             end //end all cases
     end
 
 
 //----------------------------------------------//
 //引导码，9ms载波加4.5ms空闲
-reg    [19:0]     cnt2;//@@@数据长度和13.5ms一致
-wire              start_flag;
+reg    [19:0]cnt2;//@@@数据长度和13.5ms一致
+wire         start_flag;
 always @(posedge clk or negedge rst)
     begin
         if(rst)
@@ -223,9 +231,9 @@ assign start_flag = (start_en&&(cnt2 <= t_9ms))?1:0;
 //连接码， 750us载波 20000us空闲
 reg    [14:0]     cnt5;//@@@数据长度和20000us一致
 wire              finish_flag;
-always @(posedge clk or negedge rst_n)
+always @(posedge clk or negedge rst)
     begin
-        if(!rst_n)
+        if(!rst)
             begin
                 cnt5 <= 0;
             end
@@ -236,16 +244,16 @@ always @(posedge clk or negedge rst_n)
                 end
             else cnt5  <= 0;         
     end
-assign finish_over = (cnt5 == t_20000us)?1:0;    
-assign finish_flag = (connect_en&&(cnt5 <= t_750us))?1:0;
+assign connect_over = (cnt5 == t_20000us)?1:0;    
+assign connect_flag = (connect_en&&(cnt5 <= t_750us))?1:0;
 
 //----------------------------------------------//
 //比特0， 560us载波 + 560us空闲
 reg    [15:0]     cnt3;// @@@数据长度和1200us一致
 wire              zero_flag;
-always @(posedge clk or negedge rst_n)
+always @(posedge clk or negedge rst)
     begin
-        if(!rst_n)
+        if(!rst)
             begin
                 cnt3 <= 0;
             end
@@ -263,9 +271,9 @@ assign zero_flag = (zero_en&&(cnt3 <= t_750us))?1:0;
 //比特1， 560us载波 + 1.68ms空闲
 reg    [16:0]     cnt4;// @@@数据长度和t_2250us一致
 wire              one_flag;
-always @(posedge clk or negedge rst_n)
+always @(posedge clk or negedge rst)
     begin
-        if(!rst_n)
+        if(!rst)
             begin
                 cnt4 <= 0;
             end
@@ -279,4 +287,9 @@ always @(posedge clk or negedge rst_n)
 assign one_over = (cnt4 == t_2250us)?1:0;    
 assign one_flag = (one_en&&(cnt4 <= t_1500us))?1:0;
     
+wire   ir_out;
+assign ir_out = start_flag||zero_flag||one_flag||connect_flag;
+assign IR_out = ir_out&&clk_38k;
+assign led_out = led;
+
 endmodule
