@@ -12,24 +12,24 @@ reg [34:0] data35;
 reg [31:0] data32;
 reg [31:0] data32temp;
 
-parameter t_38k    = 10'd3288;
-parameter t_38k_half = 10'd1644;
-parameter t_9ms    = 18'd900000;//100MHz*9ms
-parameter t_4_5ms  = 17'd450000;
-parameter t_13_5ms = 19'd1350000;
-parameter t_20000us = 14'd2000000;
-parameter t_20750us = 14'd2075000;
-parameter t_750us = 15'd75000;
-parameter t_450us = 16'd45000;
-parameter t_1500us = 16'd150000;
-parameter t_1200us = 16'd120000;
-parameter t_2250us = 16'd225000;
+parameter t_38k    = 12'd3288;
+parameter t_38k_half = 11'd1644;
+parameter t_9ms    = 20'd900000;//100MHz*9ms
+parameter t_4_5ms  = 19'd450000;
+parameter t_13_5ms = 21'd1350000;
+parameter t_20000us = 21'd2000000;
+parameter t_20750us = 21'd2075000;
+parameter t_750us = 17'd75000;
+parameter t_450us = 17'd45000;
+parameter t_1500us = 18'd150000;
+parameter t_1200us = 18'd120000;
+parameter t_2250us = 18'd225000;
 // 这里的二进制数位是错的
 
 
 //38k分频----------------------------------------------//
 reg  [10:0] cnt1;
-reg  clk_38k;
+wire  clk_38k;
 always @(posedge clk or negedge rst)
     begin
         if(rst)
@@ -41,8 +41,8 @@ always @(posedge clk or negedge rst)
                     cnt1 <= 0;
                 end
             else cnt1 <= cnt1 + 1;
-        assign  clk_38k = (cnt1<t_38k_half)?1:0;
     end
+assign  clk_38k = (cnt1<t_38k_half)?1:0;
 //38k分频----------------------------------------------//
 
 //状态机发送----------------------------------------------//
@@ -73,7 +73,7 @@ reg   [3:0]     i;//记录数据目前的位数
 
 always @(posedge clk or negedge rst)
     begin
-        if(!rst)
+        if(rst)
             begin
                 state <= IDEL;
                 start_en <= 0;
@@ -210,7 +210,7 @@ always @(posedge clk or negedge rst)
 
 //----------------------------------------------//
 //引导码，9ms载波加4.5ms空闲
-reg    [19:0]cnt2;//@@@数据长度和13.5ms一致
+reg    [20:0]cnt2;//@@@数据长度和13.5ms一致
 wire         start_flag;
 always @(posedge clk or negedge rst)
     begin
@@ -289,7 +289,9 @@ assign one_flag = (one_en&&(cnt4 <= t_1500us))?1:0;
     
 wire   ir_out;
 assign ir_out = start_flag||zero_flag||one_flag||connect_flag;
-assign IR_out = ir_out&&clk_38k;
+assign IR_out = ir_out;
+// assign IR_out = ir_out&&clk_38k;
+
 assign led_out = led;
 
 endmodule
