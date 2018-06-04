@@ -69,7 +69,7 @@ reg             data35_over;
 reg             data32_over;
 // reg             kaiguan;
 
-reg   [3:0]     i;//记录数据目前的位数
+reg   [5:0]     i;//记录数据目前的位数
 
 always @(posedge clk or negedge rst)
     begin
@@ -82,7 +82,7 @@ always @(posedge clk or negedge rst)
                 connect_en <= 0;
                 // sendover <= 0;
                 // shiftdata <= 0; 
-                i <= 35; //给data35来用
+                i <= 6'd35; //给data35来用
                 // DATA <= 8'D0;
                 // kaiguan <= 1;
             end                   
@@ -97,7 +97,7 @@ always @(posedge clk or negedge rst)
                             connect_en <= 0;
                             data35_over <= 0;
                             data32_over <= 0;
-                            i <= 35;//给data35来用
+                            i <= 6'd35;//给data35来用
                             led <= 0;//熄灭一盏小灯
                             if(key_1)//关机
                                 begin
@@ -133,7 +133,7 @@ always @(posedge clk or negedge rst)
                         begin
                             if(data35_over)
                                 begin  
-                                    i <= 32;    //给data32来用
+                                    i <= 6'd32;    //给data32来用
                                     one_en <= 0;
                                     zero_en <= 0;
                                     state <= CONNECT;
@@ -175,7 +175,7 @@ always @(posedge clk or negedge rst)
                         begin
                             if(data32_over)
                                 begin  
-                                    i <= 35;    //给data35来用
+                                    i <= 6'd35;    //给data35来用
                                     one_en <= 0;
                                     zero_en <= 0;
                                     data32temp <= data32;//将传送后的值记录下来，在IDEL状态不断进行判断
