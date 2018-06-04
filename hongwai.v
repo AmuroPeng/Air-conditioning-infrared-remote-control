@@ -229,7 +229,7 @@ assign start_over = (cnt2 == t_13_5ms)?1:0;
 assign start_flag = (start_en&&(cnt2 <= t_9ms))?1:0;
 
 //连接码， 750us载波 20000us空闲
-reg    [14:0]     cnt5;//@@@数据长度和20000us一致
+reg    [20:0]     cnt5;//@@@数据长度和20000us一致
 wire              finish_flag;
 always @(posedge clk or negedge rst)
     begin
@@ -249,7 +249,7 @@ assign connect_flag = (connect_en&&(cnt5 <= t_750us))?1:0;
 
 //----------------------------------------------//
 //比特0， 560us载波 + 560us空闲
-reg    [15:0]     cnt3;// @@@数据长度和1200us一致
+reg    [17:0]     cnt3;// @@@数据长度和1200us一致
 wire              zero_flag;
 always @(posedge clk or negedge rst)
     begin
@@ -269,7 +269,7 @@ assign zero_flag = (zero_en&&(cnt3 <= t_750us))?1:0;
     
 //----------------------------------------------//
 //比特1， 560us载波 + 1.68ms空闲
-reg    [16:0]     cnt4;// @@@数据长度和t_2250us一致
+reg    [17:0]     cnt4;// @@@数据长度和t_2250us一致
 wire              one_flag;
 always @(posedge clk or negedge rst)
     begin
