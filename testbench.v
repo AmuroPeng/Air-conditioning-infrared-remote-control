@@ -20,10 +20,15 @@ hongwai U0 (
    
 initial begin
    clk = 0; 
-   rst = 0; 
-   key_1 = 0; 
    IR_in_data35 = 35'b11111000001111100000111110000011111;
    IR_in_data32 = 32'b11111000001111100000111110000011;
+   rst = 0; 
+   #10
+   rst = 1;
+   #10
+   rst = 0;
+   #10
+   key_1 = 1; 
 end 
    
 always  

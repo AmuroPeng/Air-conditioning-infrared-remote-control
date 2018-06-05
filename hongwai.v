@@ -14,16 +14,16 @@ reg [31:0] data32temp;
 
 parameter t_38k    = 12'd3288;
 parameter t_38k_half = 11'd1644;
-parameter t_9ms    = 20'd900000;//100MHz*9ms
-parameter t_4_5ms  = 19'd450000;
-parameter t_13_5ms = 21'd1350000;
-parameter t_20000us = 21'd2000000;
-parameter t_20750us = 21'd2075000;
-parameter t_750us = 17'd75000;
-parameter t_450us = 17'd45000;
-parameter t_1500us = 18'd150000;
-parameter t_1200us = 18'd120000;
-parameter t_2250us = 18'd225000;
+parameter t_9ms    = 21'd1125000;//125MHz*9ms
+parameter t_4_5ms  = 20'd562500;
+parameter t_13_5ms = 21'd1687500;
+parameter t_20000us = 22'd2500000;
+parameter t_20750us = 22'd2593750;
+parameter t_750us = 17'd93750;
+parameter t_450us = 16'd56250;
+parameter t_1500us = 18'd187500;
+parameter t_1200us = 18'd150000;
+parameter t_2250us = 19'd281250;
 // 这里的二进制数位是错的
 
 
@@ -82,7 +82,7 @@ always @(posedge clk or negedge rst)
                 connect_en <= 0;
                 // sendover <= 0;
                 // shiftdata <= 0; 
-                i <= 6'd35; //给data35来用
+                i <= 6'd34; //给data35来用
                 // DATA <= 8'D0;
                 // kaiguan <= 1;
             end                   
@@ -97,7 +97,7 @@ always @(posedge clk or negedge rst)
                             connect_en <= 0;
                             data35_over <= 0;
                             data32_over <= 0;
-                            i <= 6'd35;//给data35来用
+                            i <= 6'd34;//给data35来用
                             led <= 0;//熄灭一盏小灯
                             if(key_1)//关机
                                 begin
@@ -108,7 +108,7 @@ always @(posedge clk or negedge rst)
                             else 
                                 begin
                                     if(data32temp != data32)//两者一致说明没有新指令传入，不一样则说明需要进行调制并输出了
-                                        begin//好气哦忘记加begin&end了，之后的else老报错 debug半天T_T
+                                        begin//好气哦忘记加begin&end了，导致之后的else老报错 debug半天T_T
                                             data35 <= IR_in_data35;
                                             data32 <= IR_in_data32;
                                             state <= START;
@@ -133,7 +133,7 @@ always @(posedge clk or negedge rst)
                         begin
                             if(data35_over)
                                 begin  
-                                    i <= 6'd32;    //给data32来用
+                                    i <= 6'd31;    //给data32来用
                                     one_en <= 0;
                                     zero_en <= 0;
                                     state <= CONNECT;
@@ -142,9 +142,9 @@ always @(posedge clk or negedge rst)
                                 begin
                                     if(zero_over||one_over)   //1bit发送结束
                                         begin
-                                            i <= i - 1; //减少一位
                                             if (i==0) //是否到了最后一位
                                                 data35_over <= 1;
+                                            i <= i - 1; //减少一位
                                             one_en <= 0;
                                             zero_en <= 0;
                                         end
@@ -175,7 +175,7 @@ always @(posedge clk or negedge rst)
                         begin
                             if(data32_over)
                                 begin  
-                                    i <= 6'd35;    //给data35来用
+                                    i <= 6'd34;    //给data35来用
                                     one_en <= 0;
                                     zero_en <= 0;
                                     data32temp <= data32;//将传送后的值记录下来，在IDEL状态不断进行判断
@@ -185,9 +185,9 @@ always @(posedge clk or negedge rst)
                                 begin
                                     if(zero_over||one_over)   //1bit发送结束
                                         begin
-                                            i <= i - 1; //减少一位
                                             if (i==0) //是否到了最后一位
                                                 data32_over <= 1;
+                                            i <= i - 1; //减少一位
                                             one_en <= 0;
                                             zero_en <= 0;
                                             led <= 1;//点亮一盏小灯
@@ -225,15 +225,15 @@ always @(posedge clk or negedge rst)
                 end
             else cnt2  <= 0;         
     end
-assign start_over = (cnt2 == t_13_5ms)?1:0;    
-assign start_flag = (start_en&&(cnt2 <= t_9ms))?1:0;
+assign start_over = (cnt2 == t_13_5ms)?0:1;    
+assign start_flag = (start_en&&(cnt2 <= t_9ms))?0:1;
 
 //连接码， 750us载波 20000us空闲
-reg    [20:0]     cnt5;//@@@数据长度和20000us一致
+reg    [21:0]     cnt5;//@@@数据长度和20000us一致
 wire              finish_flag;
 always @(posedge clk or negedge rst)
     begin
-        if(!rst)
+        if(rst)
             begin
                 cnt5 <= 0;
             end
@@ -244,8 +244,8 @@ always @(posedge clk or negedge rst)
                 end
             else cnt5  <= 0;         
     end
-assign connect_over = (cnt5 == t_20000us)?1:0;    
-assign connect_flag = (connect_en&&(cnt5 <= t_750us))?1:0;
+assign connect_over = (cnt5 == t_20000us)?0:1;    
+assign connect_flag = (connect_en&&(cnt5 <= t_750us))?0:1;
 
 //----------------------------------------------//
 //比特0， 560us载波 + 560us空闲
@@ -253,7 +253,7 @@ reg    [17:0]     cnt3;// @@@数据长度和1200us一致
 wire              zero_flag;
 always @(posedge clk or negedge rst)
     begin
-        if(!rst)
+        if(rst)
             begin
                 cnt3 <= 0;
             end
@@ -269,11 +269,11 @@ assign zero_flag = (zero_en&&(cnt3 <= t_750us))?1:0;
     
 //----------------------------------------------//
 //比特1， 560us载波 + 1.68ms空闲
-reg    [17:0]     cnt4;// @@@数据长度和t_2250us一致
+reg    [18:0]     cnt4;// @@@数据长度和t_2250us一致
 wire              one_flag;
 always @(posedge clk or negedge rst)
     begin
-        if(!rst)
+        if(rst)
             begin
                 cnt4 <= 0;
             end
