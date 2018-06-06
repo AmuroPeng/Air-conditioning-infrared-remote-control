@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module hongwai(clk,rst,key_1,IR_in_data35,IR_in_data32,IR_out,led_out);
 input clk;
 input rst;
@@ -41,7 +42,7 @@ always @(posedge clk or negedge rst)
                 end
             else cnt1 <= cnt1 + 1;
     end
-assign  clk_38k = (cnt1<t_38k_half)?1:0;
+assign  clk_38k = (cnt1<t_38k_half)?0:1;
 //38k分频----------------------------------------------//
 
 //状态机发送----------------------------------------------//
@@ -264,7 +265,7 @@ always @(posedge clk or negedge rst)
         else cnt3  <= 0;         
     end
 assign zero_over = (cnt3 == t_1200us)?1:0;    
-assign zero_flag = (zero_en&&(cnt3 <= t_750us))?1:0;
+assign zero_flag = (zero_en&&(cnt3 >= t_750us))?1:0;
     
 //----------------------------------------------//
 //比特1， 560us载波 + 1.68ms空闲
@@ -284,12 +285,12 @@ always @(posedge clk or negedge rst)
         else cnt4  <= 0;         
     end
 assign one_over = (cnt4 == t_2250us)?1:0;    
-assign one_flag = (one_en&&(cnt4 <= t_1500us))?1:0;
+assign one_flag = (one_en&&(cnt4 >= t_1500us))?1:0;
     
 wire   ir_out;
 assign ir_out = start_flag||zero_flag||one_flag||connect_flag;
-assign IR_out = ir_out;
-// assign IR_out = ir_out&&clk_38k;
+// assign IR_out = ir_out;
+assign IR_out = ir_out&&clk_38k;
 
 assign led_out = led;
 
