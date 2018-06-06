@@ -24,7 +24,6 @@ parameter t_450us = 16'd56250;
 parameter t_1500us = 18'd187500;
 parameter t_1200us = 18'd150000;
 parameter t_2250us = 19'd281250;
-// 这里的二进制数位是错的
 
 
 //38k分频----------------------------------------------//
@@ -225,8 +224,8 @@ always @(posedge clk or negedge rst)
                 end
             else cnt2  <= 0;         
     end
-assign start_over = (cnt2 == t_13_5ms)?0:1;    
-assign start_flag = (start_en&&(cnt2 <= t_9ms))?0:1;
+assign start_over = (cnt2 == t_13_5ms)?1:0;    
+assign start_flag = (start_en&&(cnt2 >= t_9ms))?1:0;
 
 //连接码， 750us载波 20000us空闲
 reg    [21:0]     cnt5;//@@@数据长度和20000us一致
@@ -244,8 +243,8 @@ always @(posedge clk or negedge rst)
                 end
             else cnt5  <= 0;         
     end
-assign connect_over = (cnt5 == t_20000us)?0:1;    
-assign connect_flag = (connect_en&&(cnt5 <= t_750us))?0:1;
+assign connect_over = (cnt5 == t_20000us)?1:0;    
+assign connect_flag = (connect_en&&(cnt5 >= t_750us))?1:0;
 
 //----------------------------------------------//
 //比特0， 560us载波 + 560us空闲
