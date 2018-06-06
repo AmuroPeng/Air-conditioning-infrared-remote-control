@@ -12,8 +12,8 @@ reg [34:0] data35;
 reg [31:0] data32;
 reg [31:0] data32temp;
 
-parameter t_38k    = 12'd3288;
-parameter t_38k_half = 11'd1644;
+parameter t_38k    = 12'd3289;//125MHz/38kHz
+parameter t_38k_half = 12'd1644;
 parameter t_9ms    = 21'd1125000;//125MHz*9ms
 parameter t_4_5ms  = 20'd562500;
 parameter t_13_5ms = 21'd1687500;
@@ -27,7 +27,7 @@ parameter t_2250us = 19'd281250;
 
 
 //38k分频----------------------------------------------//
-reg  [10:0] cnt1;
+reg  [12:0] cnt1;
 wire  clk_38k;
 always @(posedge clk or negedge rst)
     begin
