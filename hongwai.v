@@ -4,15 +4,15 @@ input clk;
 input rst;
 input key_1; //开关
 wire [34:0] IR_in_data35;
-wire [31:0] IR_in_data32;
+wire [32:0] IR_in_data32;
 output IR_out;
 output led_out; //完全输出一条指令后让led亮一次
 output IR_outt;
 
 reg led;
 reg [34:0] data35;
-reg [31:0] data32;
-reg [31:0] data32temp;
+reg [32:0] data32;
+reg [32:0] data32temp;
 
 parameter t_38k    = 12'd3289;//125MHz/38kHz
 parameter t_38k_half = 12'd1644;
@@ -27,6 +27,19 @@ parameter t_1500us = 18'd187500;
 parameter t_1200us = 18'd150000;
 parameter t_2250us = 19'd281250;
 
+// 按照网上的关于YB0F2遥控器的编码协议
+// parameter t_38k    = 12'd3289;//125MHz/38kHz
+// parameter t_38k_half = 12'd1644;
+// parameter t_9ms    = 21'd1125000;//125MHz*9ms
+// parameter t_4_5ms  = 20'd562500;
+// parameter t_13_5ms = 21'd1687500;
+// parameter t_20000us = 22'd2500000;
+// parameter t_20750us = 22'd2575000;
+// parameter t_750us = 17'd75000;
+// parameter t_450us = 16'd75000;
+// parameter t_1500us = 18'd200000;
+// parameter t_1200us = 18'd150000;
+// parameter t_2250us = 19'd275000;
 
 //38k分频----------------------------------------------//
 reg  [12:0] cnt1;
@@ -106,7 +119,7 @@ always @(posedge clk or negedge rst)
                                 begin
                                     state <= START;    
                                     data35 <= 35'b10000010000100000000010000001010010;
-                                    data32 <= 32'b00001000000001000000000000000110;
+                                    data32 <= 32'b000010000000010000000000000001100;
                                     idel_flag <= 0;
                                 end
                             else 
@@ -138,7 +151,7 @@ always @(posedge clk or negedge rst)
                         begin
                             if(data35_over)
                                 begin  
-                                    i <= 6'd31;    //给data32来用
+                                    i <= 6'd32;    //给data32来用
                                     one_en <= 0;
                                     zero_en <= 0;
                                     state <= CONNECT;
