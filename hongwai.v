@@ -285,7 +285,7 @@ always @(posedge clk or negedge rst)
         else cnt4  <= 0;         
     end
 assign one_over = (cnt4 == t_2250us)?1:0;    
-assign one_flag = (one_en&&(cnt4 >= t_1500us))?1:0;
+assign one_flag = (one_en&&(cnt4 >= t_750us))?1:0;
     
 wire   ir_out;
 assign ir_out = start_flag||zero_flag||one_flag||connect_flag;

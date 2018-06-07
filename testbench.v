@@ -32,6 +32,6 @@ initial begin
 end 
    
 always  
-   #10   clk = !clk; 
+   #12.5   clk = !clk; 
 
 endmodule
