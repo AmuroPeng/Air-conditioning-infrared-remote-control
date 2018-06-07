@@ -1,12 +1,13 @@
 `timescale 1ns / 1ps
-module hongwai(clk,rst,key_1,IR_in_data35,IR_in_data32,IR_out,led_out);
+module hongwai(clk,rst,key_1,IR_out,IR_outt,led_out);
 input clk;
 input rst;
 input key_1; //开关
-input [34:0] IR_in_data35;
-input [31:0] IR_in_data32;
+wire [34:0] IR_in_data35;
+wire [31:0] IR_in_data32;
 output IR_out;
 output led_out; //完全输出一条指令后让led亮一次
+output IR_outt;
 
 reg led;
 reg [34:0] data35;
@@ -67,6 +68,7 @@ reg             connect_en;
 wire            connect_over;
 reg             data35_over;
 reg             data32_over;
+reg             idel_flag;
 // reg             kaiguan;
 
 reg   [5:0]     i;//记录数据目前的位数
@@ -99,11 +101,13 @@ always @(posedge clk or negedge rst)
                             data32_over <= 0;
                             i <= 6'd34;//给data35来用
                             led <= 0;//熄灭一盏小灯
+                            idel_flag <= 1;
                             if(key_1)//关机
                                 begin
                                     state <= START;    
                                     data35 <= 35'b10000010000100000000010000001010010;
                                     data32 <= 32'b00001000000001000000000000000110;
+                                    idel_flag <= 0;
                                 end
                             else 
                                 begin
@@ -112,6 +116,7 @@ always @(posedge clk or negedge rst)
                                             data35 <= IR_in_data35;
                                             data32 <= IR_in_data32;
                                             state <= START;
+                                            idel_flag <= 1;
                                         end
                                     else state <= IDEL;//平时一直在IDEL状态里呆着
                                 end
@@ -244,7 +249,7 @@ always @(posedge clk or negedge rst)
                 end
             else cnt5  <= 0;         
     end
-assign connect_over = (cnt5 == t_20000us)?1:0;    
+assign connect_over = (cnt5 == t_20750us)?1:0;    
 assign connect_flag = (connect_en&&(cnt5 >= t_750us))?1:0;
 
 //----------------------------------------------//
@@ -288,9 +293,9 @@ assign one_over = (cnt4 == t_2250us)?1:0;
 assign one_flag = (one_en&&(cnt4 >= t_750us))?1:0;
     
 wire   ir_out;
-assign ir_out = start_flag||zero_flag||one_flag||connect_flag;
-// assign IR_out = ir_out;
-assign IR_out = ir_out&&clk_38k;
+assign ir_out = start_flag||zero_flag||one_flag||connect_flag||idel_flag;
+ assign IR_out = ir_out;
+assign IR_outt = ir_out&&clk_38k;
 
 assign led_out = led;
 
