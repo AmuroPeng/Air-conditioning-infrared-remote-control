@@ -27,7 +27,7 @@ initial begin
    rst = 1;
    #10
    rst = 0;
-   #10
+   #100
    key_1 = 1; 
 end 
    
