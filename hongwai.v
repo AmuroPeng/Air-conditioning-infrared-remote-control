@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
-module hongwai(clk,rst,key_1,IR_out,IR_outt,led_out);
+module hongwai(clk,rst,key_1,IR_in_data35,IR_in_data32,IR_out,led_out);
 input clk;
 input rst;
 input key_1; //开关
-wire [34:0] IR_in_data35;
-wire [32:0] IR_in_data32;
+input [34:0] IR_in_data35;
+input [32:0] IR_in_data32;
 output IR_out;
 output led_out; //完全输出一条指令后让led亮一次
 output IR_outt;
@@ -306,10 +306,9 @@ assign one_flag = (one_en&&(cnt4 >= t_750us))?1:0;
 wire   ir_out;
 wire  IR_outt_rev;
 assign ir_out = start_flag||zero_flag||one_flag||connect_flag||idel_flag;
-assign IR_out = ir_out;
+assign IR_out = (~ir_out)&&clk_38k;//38k载波是在低电平时才调制，所以要与上ir_out的非
 // assign IR_outt_rev = ~IR_outt;
-assign IR_outt = (~ir_out)&&clk_38k;//38k载波是在低电平时才调制，所以要与上ir_out的非
-
+// assign IR_outt = (~ir_out)&&clk_38k;
 assign led_out = led;
 
 endmodule
