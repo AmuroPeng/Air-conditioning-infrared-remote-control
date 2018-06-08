@@ -8,6 +8,7 @@ wire [32:0] IR_in_data32;
 output IR_out;
 output led_out; //完全输出一条指令后让led亮一次
 output IR_outt;
+// output IR_outt_rev;
 
 reg led;
 reg [34:0] data35;
@@ -61,15 +62,11 @@ assign  clk_38k = (cnt1<t_38k_half)?0:1;
 
 //状态机发送----------------------------------------------//
 
-//状态机发送----------------------------------------------//
 parameter  IDEL       = 3'D0;        //初始化状态，等待发送命令
 parameter  START      = 3'D1;        //开始发送起始码 
 parameter  SEND_35    = 3'D2;        //发送35位数据码
 parameter  CONNECT    = 3'D3;        //发送连接码
 parameter  SEND_32    = 3'D4;        //发送32位数据码
-// parameter  SEND_UNDATA= 3'D5;        //发送数据反码
-// parameter  FINISH     = 3'D6;        //发送结束码
-// parameter  FINISH_1   = 3'D7;        //发送结束
 reg   [2:0]     state;
 reg             start_en;//起始_使能
 wire            start_over;//起始码是否发送结束
@@ -125,7 +122,7 @@ always @(posedge clk or negedge rst)
                             else 
                                 begin
                                     if(data32temp != data32)//两者一致说明没有新指令传入，不一样则说明需要进行调制并输出了
-                                        begin//好气哦忘记加begin&end了，导致之后的else老报错 debug半天T_T
+                                        begin//好气哦忘记加begin&end了，导致之后的else老报错，debug半天T_T
                                             data35 <= IR_in_data35;
                                             data32 <= IR_in_data32;
                                             state <= START;
@@ -224,6 +221,7 @@ always @(posedge clk or negedge rst)
                 endcase
             end //end all cases
     end
+//状态机发送----------------------------------------------//
 
 
 //----------------------------------------------//
@@ -266,7 +264,7 @@ assign connect_over = (cnt5 == t_20750us)?1:0;
 assign connect_flag = (connect_en&&(cnt5 >= t_750us))?1:0;
 
 //----------------------------------------------//
-//比特0， 560us载波 + 560us空闲
+//比特0, 560us载波 + 560us空闲
 reg    [17:0]     cnt3;// @@@数据长度和1200us一致
 wire              zero_flag;
 always @(posedge clk or negedge rst)
@@ -286,7 +284,7 @@ assign zero_over = (cnt3 == t_1200us)?1:0;
 assign zero_flag = (zero_en&&(cnt3 >= t_750us))?1:0;
     
 //----------------------------------------------//
-//比特1， 560us载波 + 1.68ms空闲
+//比特1, 560us载波 + 1.68ms空闲
 reg    [18:0]     cnt4;// @@@数据长度和t_2250us一致
 wire              one_flag;
 always @(posedge clk or negedge rst)
@@ -306,9 +304,11 @@ assign one_over = (cnt4 == t_2250us)?1:0;
 assign one_flag = (one_en&&(cnt4 >= t_750us))?1:0;
     
 wire   ir_out;
+wire  IR_outt_rev;
 assign ir_out = start_flag||zero_flag||one_flag||connect_flag||idel_flag;
- assign IR_out = ir_out;
-assign IR_outt = ir_out&&clk_38k;
+assign IR_out = ir_out;
+// assign IR_outt_rev = ~IR_outt;
+assign IR_outt = (~ir_out)&&clk_38k;//38k载波是在低电平时才调制，所以要与上ir_out的非
 
 assign led_out = led;
 
