@@ -2,10 +2,16 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Fri Jun 08 16:17:17 2018
-# Process ID: 1168
+# Start of session at: Fri Jun 08 16:22:10 2018
+# Process ID: 2104
 # Log file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR/vivado.log
 # Journal file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR/edit_IR_v1_0.xpr
+ipx::package_project -root_dir D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR/IR_1.0 -vendor xilinx.com -library user -taxonomy /UserIP -import_files -set_current false -force
+ipx::unload_core d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR/IR_1.0/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR/IR_1.0 d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR/IR_1.0/component.xml
+update_compile_order -fileset sim_1
+current_project edit_IR_v1_0
+close_project

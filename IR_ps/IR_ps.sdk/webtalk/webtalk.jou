@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# 
+# Start of session at: Fri Jun 08 18:02:47 2018
+# Process ID: 5988
+# Log file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/IR_ps/IR_ps.sdk/webtalk/webtalk.log
+# Journal file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/IR_ps/IR_ps.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl
