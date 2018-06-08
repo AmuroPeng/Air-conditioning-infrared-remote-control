@@ -1,14 +1,20 @@
 `timescale 1ns / 1ps
-module hongwai(clk,rst,key_1,IR_in_data35,IR_in_data32,IR_out,led_out);
+module hongwai(clk,rst,key_1,IR_in_data35_1,IR_in_data35_0,IR_in_data32,IR_out,led_out);
 input clk;
 input rst;
 input key_1; //开关
-input [34:0] IR_in_data35;
-input [32:0] IR_in_data32;
+input [31:0] IR_in_data35_1;
+input [2:0] IR_in_data35_0;
+input [31:0] IR_in_data32;
 output IR_out;
 output led_out; //完全输出一条指令后让led亮一次
 output IR_outt;
 // output IR_outt_rev;
+
+wire [32:0] IR_data32;
+assign IR_data32 = {IR_in_data32,0};
+wire IR_in_data35;
+assign IR_in_data35 = {IR_in_data35_1,IR_in_data35_0};
 
 reg led;
 reg [34:0] data35;
@@ -124,7 +130,7 @@ always @(posedge clk or negedge rst)
                                     if(data32temp != data32)//两者一致说明没有新指令传入，不一样则说明需要进行调制并输出了
                                         begin//好气哦忘记加begin&end了，导致之后的else老报错，debug半天T_T
                                             data35 <= IR_in_data35;
-                                            data32 <= IR_in_data32;
+                                            data32 <= IR_data32;
                                             state <= START;
                                             idel_flag <= 1;
                                         end
