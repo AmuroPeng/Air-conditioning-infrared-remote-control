@@ -2,13 +2,13 @@
 module hongwai(clk,rst,key_1,IR_in_data35_1,IR_in_data35_0,IR_in_data32,IR_out,led_out);
 input clk;
 input rst;
-input key_1; //å¼€å…³
+input key_1; //¿ª¹Ø
 input [31:0] IR_in_data35_1;
 input [2:0] IR_in_data35_0;
 input [31:0] IR_in_data32;
 output IR_out;
-output led_out; //å®Œå…¨è¾“å‡ºä¸€æ¡æŒ‡ä»¤åè®©ledäº®ä¸€æ¬¡
-output IR_outt;
+output led_out; //ÍêÈ«Êä³öÒ»ÌõÖ¸ÁîºóÈÃledÁÁÒ»´Î
+// output IR_outt;
 // output IR_outt_rev;
 
 wire [32:0] IR_data32;
@@ -34,7 +34,7 @@ parameter t_1500us = 18'd187500;
 parameter t_1200us = 18'd150000;
 parameter t_2250us = 19'd281250;
 
-// æŒ‰ç…§ç½‘ä¸Šçš„å…³äºYB0F2é¥æ§å™¨çš„ç¼–ç åè®®
+// °´ÕÕÍøÉÏµÄ¹ØÓÚYB0F2Ò£¿ØÆ÷µÄ±àÂëĞ­Òé
 // parameter t_38k    = 12'd3289;//125MHz/38kHz
 // parameter t_38k_half = 12'd1644;
 // parameter t_9ms    = 21'd1125000;//125MHz*9ms
@@ -48,7 +48,7 @@ parameter t_2250us = 19'd281250;
 // parameter t_1200us = 18'd150000;
 // parameter t_2250us = 19'd275000;
 
-//38kåˆ†é¢‘----------------------------------------------//
+//38k·ÖÆµ----------------------------------------------//
 reg  [12:0] cnt1;
 wire  clk_38k;
 always @(posedge clk or negedge rst)
@@ -64,20 +64,20 @@ always @(posedge clk or negedge rst)
             else cnt1 <= cnt1 + 1;
     end
 assign  clk_38k = (cnt1<t_38k_half)?0:1;
-//38kåˆ†é¢‘----------------------------------------------//
+//38k·ÖÆµ----------------------------------------------//
 
-//çŠ¶æ€æœºå‘é€----------------------------------------------//
+//×´Ì¬»ú·¢ËÍ----------------------------------------------//
 
-parameter  IDEL       = 3'D0;        //åˆå§‹åŒ–çŠ¶æ€ï¼Œç­‰å¾…å‘é€å‘½ä»¤
-parameter  START      = 3'D1;        //å¼€å§‹å‘é€èµ·å§‹ç  
-parameter  SEND_35    = 3'D2;        //å‘é€35ä½æ•°æ®ç 
-parameter  CONNECT    = 3'D3;        //å‘é€è¿æ¥ç 
-parameter  SEND_32    = 3'D4;        //å‘é€32ä½æ•°æ®ç 
+parameter  IDEL       = 3'D0;        //³õÊ¼»¯×´Ì¬£¬µÈ´ı·¢ËÍÃüÁî
+parameter  START      = 3'D1;        //¿ªÊ¼·¢ËÍÆğÊ¼Âë 
+parameter  SEND_35    = 3'D2;        //·¢ËÍ35Î»Êı¾İÂë
+parameter  CONNECT    = 3'D3;        //·¢ËÍÁ¬½ÓÂë
+parameter  SEND_32    = 3'D4;        //·¢ËÍ32Î»Êı¾İÂë
 reg   [2:0]     state;
-reg             start_en;//èµ·å§‹_ä½¿èƒ½
-wire            start_over;//èµ·å§‹ç æ˜¯å¦å‘é€ç»“æŸ
+reg             start_en;//ÆğÊ¼_Ê¹ÄÜ
+wire            start_over;//ÆğÊ¼ÂëÊÇ·ñ·¢ËÍ½áÊø
 reg             zero_en;
-wire            zero_over;//è¿™äº›åˆ¤æ–­æ˜¯å¦ç»“æŸçš„å˜é‡è™½ç„¶å­˜åœ¨äºalwaysè¯­å¥é‡Œï¼Œä½†æ˜¯å€¼å¹¶æ²¡æœ‰ä¿®æ”¹åªæ˜¯ç”¨äºåˆ¤æ–­ï¼Œæ‰€ä»¥wireå‹æ²¡çš„æ¯›ç—…
+wire            zero_over;//ÕâĞ©ÅĞ¶ÏÊÇ·ñ½áÊøµÄ±äÁ¿ËäÈ»´æÔÚÓÚalwaysÓï¾äÀï£¬µ«ÊÇÖµ²¢Ã»ÓĞĞŞ¸ÄÖ»ÊÇÓÃÓÚÅĞ¶Ï£¬ËùÒÔwireĞÍÃ»µÄÃ«²¡
 reg             one_en;
 wire            one_over;
 reg             connect_en;
@@ -87,7 +87,7 @@ reg             data32_over;
 reg             idel_flag;
 // reg             kaiguan;
 
-reg   [5:0]     i;//è®°å½•æ•°æ®ç›®å‰çš„ä½æ•°
+reg   [5:0]     i;//¼ÇÂ¼Êı¾İÄ¿Ç°µÄÎ»Êı
 
 always @(posedge clk or negedge rst)
     begin
@@ -100,7 +100,7 @@ always @(posedge clk or negedge rst)
                 connect_en <= 0;
                 // sendover <= 0;
                 // shiftdata <= 0; 
-                i <= 6'd34; //ç»™data35æ¥ç”¨
+                i <= 6'd34; //¸ødata35À´ÓÃ
                 // DATA <= 8'D0;
                 // kaiguan <= 1;
             end                   
@@ -115,10 +115,10 @@ always @(posedge clk or negedge rst)
                             connect_en <= 0;
                             data35_over <= 0;
                             data32_over <= 0;
-                            i <= 6'd34;//ç»™data35æ¥ç”¨
-                            led <= 0;//ç†„ç­ä¸€ç›å°ç¯
+                            i <= 6'd34;//¸ødata35À´ÓÃ
+                            led <= 0;//Ï¨ÃğÒ»ÕµĞ¡µÆ
                             idel_flag <= 1;
-                            if(key_1)//å…³æœº
+                            if(key_1)//¹Ø»ú
                                 begin
                                     state <= START;    
                                     data35 <= 35'b10000010000100000000010000001010010;
@@ -127,17 +127,17 @@ always @(posedge clk or negedge rst)
                                 end
                             else 
                                 begin
-                                    if(data32temp != data32)//ä¸¤è€…ä¸€è‡´è¯´æ˜æ²¡æœ‰æ–°æŒ‡ä»¤ä¼ å…¥ï¼Œä¸ä¸€æ ·åˆ™è¯´æ˜éœ€è¦è¿›è¡Œè°ƒåˆ¶å¹¶è¾“å‡ºäº†
-                                        begin//å¥½æ°”å“¦å¿˜è®°åŠ begin&endäº†ï¼Œå¯¼è‡´ä¹‹åçš„elseè€æŠ¥é”™ï¼ŒdebugåŠå¤©T_T
+                                    if(data32temp != data32)//Á½ÕßÒ»ÖÂËµÃ÷Ã»ÓĞĞÂÖ¸Áî´«Èë£¬²»Ò»ÑùÔòËµÃ÷ĞèÒª½øĞĞµ÷ÖÆ²¢Êä³öÁË
+                                        begin//ºÃÆøÅ¶Íü¼Ç¼Óbegin&endÁË£¬µ¼ÖÂÖ®ºóµÄelseÀÏ±¨´í£¬debug°ëÌìT_T
                                             data35 <= IR_in_data35;
                                             data32 <= IR_data32;
                                             state <= START;
                                             idel_flag <= 1;
                                         end
-                                    else state <= IDEL;//å¹³æ—¶ä¸€ç›´åœ¨IDELçŠ¶æ€é‡Œå‘†ç€
+                                    else state <= IDEL;//Æ½Ê±Ò»Ö±ÔÚIDEL×´Ì¬Àï´ô×Å
                                 end
                         end
-                    START:  //å‘é€èµ·å§‹ç 
+                    START:  //·¢ËÍÆğÊ¼Âë
                         begin
                             if(start_over)    
                                 begin                                         
@@ -150,22 +150,22 @@ always @(posedge clk or negedge rst)
                                     state <= START;     
                                 end     
                         end
-                    SEND_35:    //å‘é€35ä½æ•°æ®ç 
+                    SEND_35:    //·¢ËÍ35Î»Êı¾İÂë
                         begin
                             if(data35_over)
                                 begin  
-                                    i <= 6'd32;    //ç»™data32æ¥ç”¨
+                                    i <= 6'd32;    //¸ødata32À´ÓÃ
                                     one_en <= 0;
                                     zero_en <= 0;
                                     state <= CONNECT;
                                 end
                             else 
                                 begin
-                                    if(zero_over||one_over)   //1bitå‘é€ç»“æŸ
+                                    if(zero_over||one_over)   //1bit·¢ËÍ½áÊø
                                         begin
-                                            if (i==0) //æ˜¯å¦åˆ°äº†æœ€åä¸€ä½
+                                            if (i==0) //ÊÇ·ñµ½ÁË×îºóÒ»Î»
                                                 data35_over <= 1;
-                                            i <= i - 1; //å‡å°‘ä¸€ä½
+                                            i <= i - 1; //¼õÉÙÒ»Î»
                                             one_en <= 0;
                                             zero_en <= 0;
                                         end
@@ -179,7 +179,7 @@ always @(posedge clk or negedge rst)
                                     //     end  
                                 end
                         end
-                    CONNECT:  //å‘é€è¿æ¥ç 
+                    CONNECT:  //·¢ËÍÁ¬½ÓÂë
                         begin
                             if(connect_over)    
                                 begin                                         
@@ -192,26 +192,26 @@ always @(posedge clk or negedge rst)
                                     state <= CONNECT;     
                                 end     
                         end
-                    SEND_32:    //å‘é€32ä½æ•°æ®ç 
+                    SEND_32:    //·¢ËÍ32Î»Êı¾İÂë
                         begin
                             if(data32_over)
                                 begin  
-                                    i <= 6'd34;    //ç»™data35æ¥ç”¨
+                                    i <= 6'd34;    //¸ødata35À´ÓÃ
                                     one_en <= 0;
                                     zero_en <= 0;
-                                    data32temp <= data32;//å°†ä¼ é€åçš„å€¼è®°å½•ä¸‹æ¥ï¼Œåœ¨IDELçŠ¶æ€ä¸æ–­è¿›è¡Œåˆ¤æ–­
+                                    data32temp <= data32;//½«´«ËÍºóµÄÖµ¼ÇÂ¼ÏÂÀ´£¬ÔÚIDEL×´Ì¬²»¶Ï½øĞĞÅĞ¶Ï
                                     state <= IDEL;
                                 end
                             else 
                                 begin
-                                    if(zero_over||one_over)   //1bitå‘é€ç»“æŸ
+                                    if(zero_over||one_over)   //1bit·¢ËÍ½áÊø
                                         begin
-                                            if (i==0) //æ˜¯å¦åˆ°äº†æœ€åä¸€ä½
+                                            if (i==0) //ÊÇ·ñµ½ÁË×îºóÒ»Î»
                                                 data32_over <= 1;
-                                            i <= i - 1; //å‡å°‘ä¸€ä½
+                                            i <= i - 1; //¼õÉÙÒ»Î»
                                             one_en <= 0;
                                             zero_en <= 0;
-                                            led <= 1;//ç‚¹äº®ä¸€ç›å°ç¯
+                                            led <= 1;//µãÁÁÒ»ÕµĞ¡µÆ
                                         end
                                     else if(data32[i]) one_en <= 1; 
                                     else if(!data32[i]) zero_en <= 1;
@@ -227,12 +227,12 @@ always @(posedge clk or negedge rst)
                 endcase
             end //end all cases
     end
-//çŠ¶æ€æœºå‘é€----------------------------------------------//
+//×´Ì¬»ú·¢ËÍ----------------------------------------------//
 
 
 //----------------------------------------------//
-//å¼•å¯¼ç ï¼Œ9msè½½æ³¢åŠ 4.5msç©ºé—²
-reg    [20:0]cnt2;//@@@æ•°æ®é•¿åº¦å’Œ13.5msä¸€è‡´
+//Òıµ¼Âë£¬9msÔØ²¨¼Ó4.5ms¿ÕÏĞ
+reg    [20:0]cnt2;//@@@Êı¾İ³¤¶ÈºÍ13.5msÒ»ÖÂ
 wire         start_flag;
 always @(posedge clk or negedge rst)
     begin
@@ -250,8 +250,8 @@ always @(posedge clk or negedge rst)
 assign start_over = (cnt2 == t_13_5ms)?1:0;    
 assign start_flag = (start_en&&(cnt2 >= t_9ms))?1:0;
 
-//è¿æ¥ç ï¼Œ 750usè½½æ³¢ 20000usç©ºé—²
-reg    [21:0]     cnt5;//@@@æ•°æ®é•¿åº¦å’Œ20000usä¸€è‡´
+//Á¬½ÓÂë£¬ 750usÔØ²¨ 20000us¿ÕÏĞ
+reg    [21:0]     cnt5;//@@@Êı¾İ³¤¶ÈºÍ20000usÒ»ÖÂ
 wire              finish_flag;
 always @(posedge clk or negedge rst)
     begin
@@ -270,8 +270,8 @@ assign connect_over = (cnt5 == t_20750us)?1:0;
 assign connect_flag = (connect_en&&(cnt5 >= t_750us))?1:0;
 
 //----------------------------------------------//
-//æ¯”ç‰¹0, 560usè½½æ³¢ + 560usç©ºé—²
-reg    [17:0]     cnt3;// @@@æ•°æ®é•¿åº¦å’Œ1200usä¸€è‡´
+//±ÈÌØ0, 560usÔØ²¨ + 560us¿ÕÏĞ
+reg    [17:0]     cnt3;// @@@Êı¾İ³¤¶ÈºÍ1200usÒ»ÖÂ
 wire              zero_flag;
 always @(posedge clk or negedge rst)
     begin
@@ -290,8 +290,8 @@ assign zero_over = (cnt3 == t_1200us)?1:0;
 assign zero_flag = (zero_en&&(cnt3 >= t_750us))?1:0;
     
 //----------------------------------------------//
-//æ¯”ç‰¹1, 560usè½½æ³¢ + 1.68msç©ºé—²
-reg    [18:0]     cnt4;// @@@æ•°æ®é•¿åº¦å’Œt_2250usä¸€è‡´
+//±ÈÌØ1, 560usÔØ²¨ + 1.68ms¿ÕÏĞ
+reg    [18:0]     cnt4;// @@@Êı¾İ³¤¶ÈºÍt_2250usÒ»ÖÂ
 wire              one_flag;
 always @(posedge clk or negedge rst)
     begin
@@ -312,7 +312,7 @@ assign one_flag = (one_en&&(cnt4 >= t_750us))?1:0;
 wire   ir_out;
 wire  IR_outt_rev;
 assign ir_out = start_flag||zero_flag||one_flag||connect_flag||idel_flag;
-assign IR_out = (~ir_out)&&clk_38k;//38kè½½æ³¢æ˜¯åœ¨ä½ç”µå¹³æ—¶æ‰è°ƒåˆ¶ï¼Œæ‰€ä»¥è¦ä¸ä¸Šir_outçš„é
+assign IR_out = (~ir_out)&&clk_38k;//38kÔØ²¨ÊÇÔÚµÍµçÆ½Ê±²Åµ÷ÖÆ£¬ËùÒÔÒªÓëÉÏir_outµÄ·Ç
 // assign IR_outt_rev = ~IR_outt;
 // assign IR_outt = (~ir_out)&&clk_38k;
 assign led_out = led;
