@@ -1,0 +1,459 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri Jun 08 10:30:57 2018
+# Process ID: 9900
+# Log file: D:/1Study/大三下/硬件课设/hongwai/Air-conditioning-infrared-remote-control/project_38kkkkk/project_38kkkkk.runs/synth_1/hongwai.vds
+# Journal file: D:/1Study/大三下/硬件课设/hongwai/Air-conditioning-infrared-remote-control/project_38kkkkk/project_38kkkkk.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source hongwai.tcl -notrace
+Command: synth_design -top hongwai -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 264.230 ; gain = 92.539
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hongwai' [D:/1Study/大三下/硬件课设/hongwai/Air-conditioning-infrared-remote-control/hongwai.v:2]
+	Parameter t_38k bound to: 12'b110011011001 
+	Parameter t_38k_half bound to: 12'b011001101100 
+	Parameter t_9ms bound to: 21'b100010010101010001000 
+	Parameter t_4_5ms bound to: 20'b10001001010101000100 
+	Parameter t_13_5ms bound to: 21'b110011011111111001100 
+	Parameter t_20000us bound to: 22'b1001100010010110100000 
+	Parameter t_20750us bound to: 22'b1001111001001111010110 
+	Parameter t_750us bound to: 17'b10110111000110110 
+	Parameter t_450us bound to: 16'b1101101110111010 
+	Parameter t_1500us bound to: 18'b101101110001101100 
+	Parameter t_1200us bound to: 18'b100100100111110000 
+	Parameter t_2250us bound to: 19'b1000100101010100010 
+	Parameter IDEL bound to: 3'b000 
+	Parameter START bound to: 3'b001 
+	Parameter SEND_35 bound to: 3'b010 
+	Parameter CONNECT bound to: 3'b011 
+	Parameter SEND_32 bound to: 3'b100 
+WARNING: [Synth 8-3848] Net IR_in_data32 in module/entity hongwai does not have driver. [D:/1Study/大三下/硬件课设/hongwai/Air-conditioning-infrared-remote-control/hongwai.v:7]
+WARNING: [Synth 8-3848] Net IR_in_data35 in module/entity hongwai does not have driver. [D:/1Study/大三下/硬件课设/hongwai/Air-conditioning-infrared-remote-control/hongwai.v:6]
+INFO: [Synth 8-256] done synthesizing module 'hongwai' (1#1) [D:/1Study/大三下/硬件课设/hongwai/Air-conditioning-infrared-remote-control/hongwai.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 298.422 ; gain = 126.730
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 298.422 ; gain = 126.730
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/1Study/大三下/硬件课设/hongwai/Air-conditioning-infrared-remote-control/project_38kkkkk/project_38kkkkk.srcs/constrs_1/new/123.xdc]
+Finished Parsing XDC File [D:/1Study/大三下/硬件课设/hongwai/Air-conditioning-infrared-remote-control/project_38kkkkk/project_38kkkkk.srcs/constrs_1/new/123.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 615.168 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'hongwai'
+INFO: [Synth 8-5545] ROM "start_over" won't be mapped to RAM because address size (21) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "connect_over" won't be mapped to RAM because address size (22) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "zero_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "one_over" won't be mapped to RAM because address size (19) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "data35_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "start_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "connect_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "idel_flag" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDEL |                              000 |                              000
+                   START |                              001 |                              001
+                 SEND_35 |                              010 |                              010
+                 CONNECT |                              011 |                              011
+                 SEND_32 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'hongwai'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               35 Bit    Registers := 1     
+	               33 Bit    Registers := 2     
+	               22 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+	               19 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 2     
+	   2 Input     21 Bit        Muxes := 2     
+	   2 Input     19 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	   5 Input      6 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 20    
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module hongwai 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               35 Bit    Registers := 1     
+	               33 Bit    Registers := 2     
+	               22 Bit    Registers := 1     
+	               21 Bit    Registers := 1     
+	               19 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     35 Bit        Muxes := 1     
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     22 Bit        Muxes := 2     
+	   2 Input     21 Bit        Muxes := 2     
+	   2 Input     19 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	   5 Input      6 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 20    
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "start_over" won't be mapped to RAM because address size (21) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "one_over" won't be mapped to RAM because address size (19) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "zero_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "connect_over" won't be mapped to RAM because address size (22) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 615.168 ; gain = 443.477
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data32_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\data32temp_reg[32] )
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[34] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[33] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[32] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[31] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[30] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[29] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[28] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[27] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[26] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[25] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[24] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[23] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[22] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[21] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[20] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[19] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[18] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[17] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[16] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[15] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[14] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[13] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[12] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[11] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[10] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[9] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[8] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[7] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[6] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[5] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[4] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[3] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[2] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[32] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[31] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[30] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[29] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[27] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[26] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[25] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[24] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[23] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[22] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[21] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[20] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[19] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[18] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[17] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[16] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[15] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[14] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[13] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[12] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[11] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[10] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[9] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[8] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[7] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[6] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[5] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[4] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[3] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[2] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[1] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32temp_reg[0] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[28] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[1] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[32] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data35_reg[0] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[31] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[30] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[29] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[27] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[19] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[26] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[25] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[24] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[23] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[22] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[21] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[20] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[18] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[3] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[17] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[16] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[15] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[14] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[13] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[12] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[11] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[10] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[9] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[8] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[7] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[6] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[5] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[4] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[1] ) is unused and will be removed from module hongwai.
+WARNING: [Synth 8-3332] Sequential element (\data32_reg[0] ) is unused and will be removed from module hongwai.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 615.168 ; gain = 443.477
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    25|
+|3     |LUT1   |    89|
+|4     |LUT2   |    16|
+|5     |LUT3   |    91|
+|6     |LUT4   |    22|
+|7     |LUT5   |    27|
+|8     |LUT6   |    62|
+|9     |MUXF7  |     1|
+|10    |FDCE   |   104|
+|11    |FDPE   |     2|
+|12    |FDRE   |     6|
+|13    |IBUF   |     3|
+|14    |OBUF   |     4|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   453|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 615.168 ; gain = 443.477
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 99 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 615.168 ; gain = 88.203
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 615.168 ; gain = 443.477
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 615.168 ; gain = 405.152
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 615.168 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 08 10:31:27 2018...
