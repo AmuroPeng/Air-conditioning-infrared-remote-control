@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Fri Jun 08 17:21:26 2018
+| Date         : Sat Jun 09 22:36:56 2018
 | Host         : AmuroPC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file design_IR_test_wrapper_control_sets_placed.rpt
 | Design       : design_IR_test_wrapper

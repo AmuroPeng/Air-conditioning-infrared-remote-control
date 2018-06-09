@@ -1,8 +1,22 @@
 /*
  * IR_cs.c
  *
- *  Created on: 2018Äê6ÔÂ8ÈÕ
+ *  Created on: 2018??6??8??
  *      Author: Amuro
  */
-#include"xparameters.h"
+
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_io.h"
+#include "sleep.h"
+#include "xil_types.h"
+
+int main()
+{
+	Xil_Out32(XPAR_IR_V1_0_0_BASEADDR , 2450523146U);//Type Cast to long long
+	Xil_Out32(XPAR_IR_V1_0_0_BASEADDR+4 , 2);
+	Xil_Out32(XPAR_IR_V1_0_0_BASEADDR+8, 134479879);
+
+    return 0;
+}
 

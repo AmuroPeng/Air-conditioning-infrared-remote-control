@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun Jun 10 00:07:49 2018
+# Process ID: 12612
+# Log file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR_1.2/vivado.log
+# Journal file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR_1.2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR_1.2/edit_IR_v1_2.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+create_peripheral xilinx.com user IR 1.0 -dir D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:IR:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:IR:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:IR:1.0]
+set_property  ip_repo_paths  {D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2/IR_1.0 D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR_1.2/IR_1.2 D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR_1.1/IR_1.1 D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR/IR_1.0} [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_IR_v1_0 -directory D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2 d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2/IR_1.0/component.xml
+update_compile_order -fileset sim_1
+add_files -norecurse D:/5Project/PYNQ/±¸·ÝAir-conditioning-infrared-remote-controelll/hongwai.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::package_project -root_dir D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2/IR_1.0 -vendor xilinx.com -library user -taxonomy /UserIP -import_files -set_current false -force
+ipx::unload_core d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2/IR_1.0/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2/IR_1.0 d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2/IR_1.0/component.xml
+current_project edit_IR_v1_0
+current_project tmp_edit_project
+update_compile_order -fileset sim_1
+close_project
+ipx::package_project -root_dir D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/IP_definition -vendor xilinx.com -library user -taxonomy /UserIP -import_files -set_current false
+ipx::unload_core d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/IP_definition/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/IP_definition d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/IP_definition/component.xml
+update_compile_order -fileset sim_1
+close_project
+current_project edit_IR_v1_2
+close_project
+ipx::package_project -root_dir D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2/IR_1.0 -vendor xilinx.com -library user -taxonomy /UserIP -import_files -set_current false -force
+ipx::unload_core d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2/IR_1.0/component.xml
+ipx::edit_ip_in_project -upgrade true -name tmp_edit_project -directory D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2/IR_1.0 d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo/IR_2/IR_1.0/component.xml
+update_compile_order -fileset sim_1
+close_project

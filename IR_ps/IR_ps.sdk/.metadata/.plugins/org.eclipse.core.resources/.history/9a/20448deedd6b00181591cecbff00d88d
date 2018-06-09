@@ -1,0 +1,19 @@
+/*
+ * IR_cs.c
+ *
+ *  Created on: 2018Äê6ÔÂ8ÈÕ
+ *      Author: Amuro
+ */
+
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_io.h"
+#include "sleep.h"
+#include "xil_types.h"
+
+int main()
+{
+    /* code */
+    return 0;
+}
+

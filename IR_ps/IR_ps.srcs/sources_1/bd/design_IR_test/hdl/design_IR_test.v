@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Fri Jun 08 17:00:39 2018
+//Date        : Sun Jun 10 00:02:20 2018
 //Host        : AmuroPC running 64-bit major release  (build 9200)
 //Command     : generate_target design_IR_test.bd
 //Design      : design_IR_test
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_IR_test,IP_Integrator,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_IR_test,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,da_axi4_cnt=1,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "design_IR_test.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_IR_test,IP_Integrator,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_IR_test,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,da_axi4_cnt=2,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "design_IR_test.hwdef" *) 
 module design_IR_test
    (DDR_addr,
     DDR_ba,
@@ -33,6 +33,7 @@ module design_IR_test
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     IR_out,
+    key_1,
     led_out);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -56,12 +57,14 @@ module design_IR_test
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   output IR_out;
+  input key_1;
   output led_out;
 
   wire GND_1;
-  wire IR_v1_0_0_IR_out;
-  wire IR_v1_0_0_led_out;
+  wire IR_v1_2_0_IR_out;
+  wire IR_v1_2_0_led_out;
   wire VCC_1;
+  wire key_1_1;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -145,13 +148,15 @@ module design_IR_test
   wire [0:0]rst_processing_system7_0_100M_interconnect_aresetn;
   wire [0:0]rst_processing_system7_0_100M_peripheral_aresetn;
 
-  assign IR_out = IR_v1_0_0_IR_out;
-  assign led_out = IR_v1_0_0_led_out;
+  assign IR_out = IR_v1_2_0_IR_out;
+  assign key_1_1 = key_1;
+  assign led_out = IR_v1_2_0_led_out;
   GND GND
        (.G(GND_1));
-  design_IR_test_IR_v1_0_0_0 IR_v1_0_0
-       (.IR_out(IR_v1_0_0_IR_out),
-        .led_out(IR_v1_0_0_led_out),
+  design_IR_test_IR_v1_2_0_0 IR_v1_2_0
+       (.IR_out(IR_v1_2_0_IR_out),
+        .key_1(key_1_1),
+        .led_out(IR_v1_2_0_led_out),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(processing_system7_0_axi_periph_M00_AXI_ARADDR),
         .s00_axi_aresetn(rst_processing_system7_0_100M_peripheral_aresetn),

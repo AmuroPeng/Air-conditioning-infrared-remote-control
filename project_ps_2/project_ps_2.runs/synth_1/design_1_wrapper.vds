@@ -1,0 +1,74 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun Jun 10 01:04:27 2018
+# Process ID: 17212
+# Log file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.runs/synth_1/design_1_wrapper.vds
+# Journal file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/5Project/PYNQ/Air-conditioning-infrared-remote-control/IP_definition_2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2015.2/data/ip'.
+Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 308.258 ; gain = 136.707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'design_1' [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/bd/design_1/hdl/design_1.v:13]
+INFO: [Synth 8-638] synthesizing module 'GND' [D:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3854]
+INFO: [Synth 8-256] done synthesizing module 'GND' (1#1) [D:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3854]
+INFO: [Synth 8-638] synthesizing module 'design_1_IR_v1_0_0_1' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/bd/design_1/ip/design_1_IR_v1_0_0_1/synth/design_1_IR_v1_0_0_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'IR_v1_0' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/IR_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'IR_v1_0_S00_AXI' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/IR_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/IR_v1_0_S00_AXI.v:397]
+INFO: [Synth 8-638] synthesizing module 'hongwai' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/hongwai.v:2]
+	Parameter t_38k bound to: 12'b110011011001 
+	Parameter t_38k_half bound to: 12'b011001101100 
+	Parameter t_9ms bound to: 21'b100010010101010001000 
+	Parameter t_4_5ms bound to: 20'b10001001010101000100 
+	Parameter t_13_5ms bound to: 21'b110011011111111001100 
+	Parameter t_20000us bound to: 22'b1001100010010110100000 
+	Parameter t_20750us bound to: 22'b1001111001001111010110 
+	Parameter t_750us bound to: 17'b10110111000110110 
+	Parameter t_450us bound to: 16'b1101101110111010 
+	Parameter t_1500us bound to: 18'b101101110001101100 
+	Parameter t_1200us bound to: 18'b100100100111110000 
+	Parameter t_2250us bound to: 19'b1000100101010100010 
+	Parameter IDEL bound to: 3'b000 
+	Parameter START bound to: 3'b001 
+	Parameter SEND_35 bound to: 3'b010 
+	Parameter CONNECT bound to: 3'b011 
+	Parameter SEND_32 bound to: 3'b100 
+WARNING: [Synth 8-3848] Net IR_in_data32 in module/entity hongwai does not have driver. [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/hongwai.v:7]
+WARNING: [Synth 8-3848] Net IR_in_data35 in module/entity hongwai does not have driver. [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/hongwai.v:6]
+INFO: [Synth 8-256] done synthesizing module 'hongwai' (2#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/hongwai.v:2]
+ERROR: [Synth 8-448] named port connection 'IR_in_data35_1' does not exist for instance 'u0' of module 'hongwai' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/IR_v1_0_S00_AXI.v:401]
+ERROR: [Synth 8-448] named port connection 'IR_in_data35_0' does not exist for instance 'u0' of module 'hongwai' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/IR_v1_0_S00_AXI.v:402]
+ERROR: [Synth 8-448] named port connection 'IR_in_data32' does not exist for instance 'u0' of module 'hongwai' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/IR_v1_0_S00_AXI.v:403]
+INFO: [Synth 8-226] default block is never used [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/IR_v1_0_S00_AXI.v:227]
+INFO: [Synth 8-226] default block is never used [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/IR_v1_0_S00_AXI.v:368]
+ERROR: [Synth 8-285] failed synthesizing module 'IR_v1_0_S00_AXI' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/IR_v1_0_S00_AXI.v:4]
+ERROR: [Synth 8-285] failed synthesizing module 'IR_v1_0' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/25c821db/src/IR_v1_0.v:4]
+ERROR: [Synth 8-285] failed synthesizing module 'design_1_IR_v1_0_0_1' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/bd/design_1/ip/design_1_IR_v1_0_0_1/synth/design_1_IR_v1_0_0_1.v:57]
+ERROR: [Synth 8-285] failed synthesizing module 'design_1' [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/bd/design_1/hdl/design_1.v:13]
+ERROR: [Synth 8-285] failed synthesizing module 'design_1_wrapper' [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_2/project_ps_2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 422.141 ; gain = 250.590
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 3 Warnings, 0 Critical Warnings and 9 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 10 01:05:11 2018...

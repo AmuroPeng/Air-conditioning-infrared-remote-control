@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Fri Jun 08 17:00:39 2018
+//Date        : Sun Jun 10 00:02:20 2018
 //Host        : AmuroPC running 64-bit major release  (build 9200)
 //Command     : generate_target design_IR_test_wrapper.bd
 //Design      : design_IR_test_wrapper
@@ -32,6 +32,7 @@ module design_IR_test_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     IR_out,
+    key_1,
     led_out);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -55,6 +56,7 @@ module design_IR_test_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   output IR_out;
+  input key_1;
   output led_out;
 
   wire [14:0]DDR_addr;
@@ -79,6 +81,7 @@ module design_IR_test_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire IR_out;
+  wire key_1;
   wire led_out;
 
   design_IR_test design_IR_test_i
@@ -104,5 +107,6 @@ module design_IR_test_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .IR_out(IR_out),
+        .key_1(key_1),
         .led_out(led_out));
 endmodule
