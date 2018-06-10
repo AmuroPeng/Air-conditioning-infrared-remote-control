@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date              : Sun Jun 10 14:31:35 2018
+| Date              : Sun Jun 10 15:55:12 2018
 | Host              : AmuroPC running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file hongwai_clock_utilization_routed.rpt
 | Design            : hongwai
@@ -47,7 +47,7 @@ Table of Contents
 +-------+--------------------+---------------+------+-------+-------+
 | Index | BUFG Cell          | Net Name      | BELs | Sites | Fixed |
 +-------+--------------------+---------------+------+-------+-------+
-|     1 | clk_IBUF_BUFG_inst | clk_IBUF_BUFG |  112 |    36 |    no |
+|     1 | clk_IBUF_BUFG_inst | clk_IBUF_BUFG |  112 |    39 |    no |
 +-------+--------------------+---------------+------+-------+-------+
 
 

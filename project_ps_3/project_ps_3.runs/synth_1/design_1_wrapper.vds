@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sun Jun 10 13:20:23 2018
-# Process ID: 4972
+# Start of session at: Sun Jun 10 15:42:06 2018
+# Process ID: 14992
 # Log file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.runs/synth_1/design_1_wrapper.vds
 # Journal file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -15,25 +15,24 @@ Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-WARNING: [Synth 8-2292] literal value truncated to fit in 21 bits [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/329496a0/src/hongwai.v:26]
-WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/329496a0/src/hongwai.v:15]
+WARNING: [Synth 8-2292] literal value truncated to fit in 21 bits [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/hongwai.v:24]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 314.207 ; gain = 141.820
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 314.203 ; gain = 141.723
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'design_1' [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/hdl/design_1.v:13]
 INFO: [Synth 8-638] synthesizing module 'GND' [D:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3854]
 INFO: [Synth 8-256] done synthesizing module 'GND' (1#1) [D:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3854]
 INFO: [Synth 8-638] synthesizing module 'design_1_IR_v1_0_0_1' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/ip/design_1_IR_v1_0_0_1/synth/design_1_IR_v1_0_0_1.v:57]
-INFO: [Synth 8-638] synthesizing module 'IR_v1_0' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/329496a0/src/IR_v1_0.v:4]
+INFO: [Synth 8-638] synthesizing module 'IR_v1_0' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'IR_v1_0_S00_AXI' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/329496a0/src/IR_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'IR_v1_0_S00_AXI' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0_S00_AXI.v:4]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'hongwai' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/329496a0/src/hongwai.v:2]
+INFO: [Synth 8-638] synthesizing module 'hongwai' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/hongwai.v:2]
 	Parameter t_38k bound to: 12'b101001000111 
 	Parameter t_38k_half bound to: 12'b010100100100 
 	Parameter t_9ms bound to: 21'b010010101010001000000 
@@ -51,11 +50,11 @@ INFO: [Synth 8-638] synthesizing module 'hongwai' [d:/5Project/PYNQ/Air-conditio
 	Parameter SEND_35 bound to: 3'b010 
 	Parameter CONNECT bound to: 3'b011 
 	Parameter SEND_32 bound to: 3'b100 
-INFO: [Synth 8-256] done synthesizing module 'hongwai' (2#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/329496a0/src/hongwai.v:2]
-INFO: [Synth 8-226] default block is never used [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/329496a0/src/IR_v1_0_S00_AXI.v:227]
-INFO: [Synth 8-226] default block is never used [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/329496a0/src/IR_v1_0_S00_AXI.v:368]
-INFO: [Synth 8-256] done synthesizing module 'IR_v1_0_S00_AXI' (3#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/329496a0/src/IR_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-256] done synthesizing module 'IR_v1_0' (4#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/329496a0/src/IR_v1_0.v:4]
+INFO: [Synth 8-256] done synthesizing module 'hongwai' (2#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/hongwai.v:2]
+INFO: [Synth 8-226] default block is never used [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0_S00_AXI.v:227]
+INFO: [Synth 8-226] default block is never used [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0_S00_AXI.v:368]
+INFO: [Synth 8-256] done synthesizing module 'IR_v1_0_S00_AXI' (3#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-256] done synthesizing module 'IR_v1_0' (4#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0.v:4]
 INFO: [Synth 8-256] done synthesizing module 'design_1_IR_v1_0_0_1' (5#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/ip/design_1_IR_v1_0_0_1/synth/design_1_IR_v1_0_0_1.v:57]
 INFO: [Synth 8-638] synthesizing module 'VCC' [D:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:35496]
 INFO: [Synth 8-256] done synthesizing module 'VCC' (6#1) [D:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:35496]
@@ -929,7 +928,7 @@ WARNING: [Synth 8-350] instance 'rst_processing_system7_0_50M' of module 'design
 INFO: [Synth 8-256] done synthesizing module 'design_1' (38#1) [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/hdl/design_1.v:13]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (39#1) [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 428.977 ; gain = 256.590
+Finished RTL Elaboration : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 429.074 ; gain = 256.594
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -939,7 +938,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 428.977 ; gain = 256.590
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 429.074 ; gain = 256.594
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -975,16 +974,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 680.492 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 680.484 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 680.492 ; gain = 508.105
+Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 680.484 ; gain = 508.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 680.492 ; gain = 508.105
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 680.484 ; gain = 508.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -997,7 +996,7 @@ Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_p
 Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/rst_processing_system7_0_50M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 680.492 ; gain = 508.105
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 680.484 ; gain = 508.004
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'hongwai'
 INFO: [Synth 8-5545] ROM "start_over" won't be mapped to RAM because address size (21) is larger than maximum supported(18)
@@ -1022,7 +1021,7 @@ INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [d:/5
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'hongwai'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 680.492 ; gain = 508.105
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 680.484 ; gain = 508.004
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1052,8 +1051,7 @@ Detailed RTL Component Info :
 	               66 Bit    Registers := 4     
 	               47 Bit    Registers := 2     
 	               35 Bit    Registers := 1     
-	               33 Bit    Registers := 2     
-	               32 Bit    Registers := 5     
+	               32 Bit    Registers := 7     
 	               22 Bit    Registers := 1     
 	               21 Bit    Registers := 1     
 	               19 Bit    Registers := 1     
@@ -1068,13 +1066,12 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 8     
 	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 11    
-	                1 Bit    Registers := 53    
+	                1 Bit    Registers := 54    
 +---Muxes : 
 	   2 Input     66 Bit        Muxes := 4     
 	   2 Input     47 Bit        Muxes := 2     
 	   2 Input     35 Bit        Muxes := 1     
-	   2 Input     33 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 12    
+	   2 Input     32 Bit        Muxes := 13    
 	   4 Input     32 Bit        Muxes := 5     
 	   2 Input     22 Bit        Muxes := 3     
 	   2 Input     21 Bit        Muxes := 3     
@@ -1091,7 +1088,7 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 9     
 	   4 Input      2 Bit        Muxes := 1     
 	   5 Input      2 Bit        Muxes := 2     
-	   5 Input      1 Bit        Muxes := 19    
+	   5 Input      1 Bit        Muxes := 20    
 	   2 Input      1 Bit        Muxes := 38    
 	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -1112,17 +1109,17 @@ Detailed RTL Component Info :
 	   2 Input      6 Bit       Adders := 1     
 +---Registers : 
 	               35 Bit    Registers := 1     
-	               33 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
 	               22 Bit    Registers := 1     
 	               21 Bit    Registers := 1     
 	               19 Bit    Registers := 1     
 	               18 Bit    Registers := 1     
 	               13 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input     35 Bit        Muxes := 1     
-	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     22 Bit        Muxes := 3     
 	   2 Input     21 Bit        Muxes := 3     
 	   2 Input     19 Bit        Muxes := 3     
@@ -1131,7 +1128,7 @@ Detailed RTL Component Info :
 	   5 Input      6 Bit        Muxes := 1     
 	   9 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 19    
+	   5 Input      1 Bit        Muxes := 20    
 	   2 Input      1 Bit        Muxes := 7     
 	   3 Input      1 Bit        Muxes := 1     
 Module IR_v1_0_S00_AXI 
@@ -1314,7 +1311,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 680.492 ; gain = 508.105
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 680.484 ; gain = 508.004
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -1325,9 +1322,9 @@ INFO: [Synth 8-5545] ROM "inst/IR_v1_0_S00_AXI_inst/u0/connect_over" won't be ma
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 680.492 ; gain = 508.105
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 680.484 ; gain = 508.004
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 680.492 ; gain = 508.105
+Finished Parallel Reinference  : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 680.484 ; gain = 508.004
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1338,16 +1335,16 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 680.492 ; gain = 508.105
+Finished Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 680.484 ; gain = 508.004
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 680.492 ; gain = 508.105
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 680.484 ; gain = 508.004
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 680.492 ; gain = 508.105
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 680.484 ; gain = 508.004
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -1355,10 +1352,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 818.645 ; gain = 646.258
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 819.391 ; gain = 646.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 835.652 ; gain = 663.266
+Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:27 . Memory (MB): peak = 836.391 ; gain = 663.910
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1396,62 +1393,6 @@ INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data35_re
 INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data35_reg[5] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
 INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data35_reg[3] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
 INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data35_reg[2] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[31] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[30] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[29] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[27] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[26] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[25] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[24] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[23] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[22] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[21] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[20] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[18] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[17] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[16] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[15] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[14] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[13] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[12] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[11] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[10] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[9] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[8] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[7] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[6] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[5] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[4] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[1] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32_reg[0] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[31] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[30] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[29] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[27] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[26] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[25] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[24] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[23] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[22] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[21] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[20] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[18] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[17] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[16] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[15] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[14] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[13] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[12] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[11] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[10] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[9] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[8] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[7] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[6] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[5] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[4] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[1] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
-INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/u0/data32temp_reg[0] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
 INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/axi_bresp_reg[1] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
 INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/axi_bresp_reg[0] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
 INFO: [Synth 8-3332] Sequential element (\inst/IR_v1_0_S00_AXI_inst/axi_rresp_reg[1] ) is unused and will be removed from module design_1_IR_v1_0_0_1.
@@ -1469,9 +1410,25 @@ INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_
 INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/skid_buffer_reg[40] ) is unused and will be removed from module design_1_auto_pc_0.
 INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[37] ) is unused and will be removed from module design_1_auto_pc_0.
 INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[65] ) is unused and will be removed from module design_1_auto_pc_0.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[64] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[63] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[62] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[49] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[48] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[43] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[42] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[41] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/skid_buffer_reg[40] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/axlen_cnt_reg[8] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/wrap_cmd_0/axlen_cnt_reg[4] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/axlen_cnt_reg[8] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/axlen_cnt_reg[4] ) is unused and will be removed from module design_1_auto_pc_0.
+INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5 ) is unused and will be removed from module design_1_rst_processing_system7_0_50M_0.
+INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6 ) is unused and will be removed from module design_1_rst_processing_system7_0_50M_0.
+INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5 ) is unused and will be removed from module design_1_rst_processing_system7_0_50M_0.
+INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6 ) is unused and will be removed from module design_1_rst_processing_system7_0_50M_0.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 853.133 ; gain = 680.746
+Finished Technology Mapping : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 854.270 ; gain = 681.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1511,7 +1468,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 853.133 ; gain = 680.746
+Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:01:32 . Memory (MB): peak = 854.270 ; gain = 681.789
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1524,7 +1481,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 853.133 ; gain = 680.746
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:28 ; elapsed = 00:01:32 . Memory (MB): peak = 854.270 ; gain = 681.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1536,13 +1493,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 853.133 ; gain = 680.746
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:28 ; elapsed = 00:01:33 . Memory (MB): peak = 854.270 ; gain = 681.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 853.133 ; gain = 680.746
+Start Renaming Generated Ports : Time (s): cpu = 00:01:28 ; elapsed = 00:01:33 . Memory (MB): peak = 854.270 ; gain = 681.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 853.133 ; gain = 680.746
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:29 ; elapsed = 00:01:33 . Memory (MB): peak = 854.270 ; gain = 681.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1580,35 +1537,36 @@ Report Cell Usage:
 |3     |CARRY4  |    41|
 |4     |GND     |     1|
 |5     |LUT1    |   249|
-|6     |LUT2    |    63|
-|7     |LUT3    |   298|
-|8     |LUT4    |    70|
-|9     |LUT5    |   278|
-|10    |LUT6    |   241|
+|6     |LUT2    |    60|
+|7     |LUT3    |   300|
+|8     |LUT4    |    68|
+|9     |LUT5    |   282|
+|10    |LUT6    |   265|
 |11    |MUXCY_L |    22|
-|12    |PS7     |     1|
-|13    |SRL16   |     1|
-|14    |SRL16E  |    22|
-|15    |SRLC32E |    47|
-|16    |VCC     |     1|
-|17    |XORCY   |    24|
-|18    |FDR     |     8|
-|19    |FDRE    |   880|
-|20    |FDSE    |    67|
-|21    |IBUF    |     1|
-|22    |OBUF    |     2|
+|12    |MUXF7   |     5|
+|13    |PS7     |     1|
+|14    |SRL16   |     1|
+|15    |SRL16E  |    22|
+|16    |SRLC32E |    47|
+|17    |VCC     |     1|
+|18    |XORCY   |    24|
+|19    |FDR     |     8|
+|20    |FDRE    |   931|
+|21    |FDSE    |    71|
+|22    |IBUF    |     1|
+|23    |OBUF    |     2|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+---------------------------------------------------+------------------------------------------------------------+------+
 |      |Instance                                           |Module                                                      |Cells |
 +------+---------------------------------------------------+------------------------------------------------------------+------+
-|1     |top                                                |                                                            |  2448|
-|2     |  design_1_i                                       |design_1                                                    |  2445|
-|3     |    IR_v1_0_0                                      |design_1_IR_v1_0_0_1                                        |   821|
-|4     |      inst                                         |IR_v1_0                                                     |   821|
-|5     |        IR_v1_0_S00_AXI_inst                       |IR_v1_0_S00_AXI                                             |   821|
-|6     |          u0                                       |hongwai                                                     |   477|
+|1     |top                                                |                                                            |  2533|
+|2     |  design_1_i                                       |design_1                                                    |  2530|
+|3     |    IR_v1_0_0                                      |design_1_IR_v1_0_0_1                                        |   906|
+|4     |      inst                                         |IR_v1_0                                                     |   906|
+|5     |        IR_v1_0_S00_AXI_inst                       |IR_v1_0_S00_AXI                                             |   906|
+|6     |          u0                                       |hongwai                                                     |   562|
 |7     |    processing_system7_0                           |design_1_processing_system7_0_1                             |   244|
 |8     |      inst                                         |processing_system7_v5_5_processing_system7                  |   244|
 |9     |    processing_system7_0_axi_periph                |design_1_processing_system7_0_axi_periph_1                  |  1310|
@@ -1646,11 +1604,11 @@ Report Instance Areas:
 |41    |          SEQ_COUNTER                              |upcnt_n                                                     |    14|
 +------+---------------------------------------------------+------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 853.133 ; gain = 680.746
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:29 ; elapsed = 00:01:33 . Memory (MB): peak = 854.270 ; gain = 681.789
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:56 . Memory (MB): peak = 853.133 ; gain = 352.500
-Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:07 . Memory (MB): peak = 853.133 ; gain = 680.746
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:01:18 . Memory (MB): peak = 854.270 ; gain = 353.738
+Synthesis Optimization Complete : Time (s): cpu = 00:01:29 ; elapsed = 00:01:33 . Memory (MB): peak = 854.270 ; gain = 681.789
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 97 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1663,8 +1621,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-280 Infos, 6 Warnings, 2 Critical Warnings and 0 Errors encountered.
+240 Infos, 5 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 853.133 ; gain = 605.090
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 853.133 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 10 13:21:33 2018...
+synth_design: Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 854.270 ; gain = 606.273
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 854.270 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 10 15:43:44 2018...

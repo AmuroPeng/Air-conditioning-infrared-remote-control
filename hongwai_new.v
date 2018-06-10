@@ -11,8 +11,6 @@ output led_out; //
 // output IR_outt;
 // output IR_outt_rev;
 
-wire [32:0] IR_data32;
-assign IR_data32 = {IR_in_data32,0};
 wire IR_in_data35;
 assign IR_in_data35 = {IR_in_data35_1,IR_in_data35_0};
 
@@ -20,21 +18,6 @@ reg led;
 reg [34:0] data35;
 reg [31:0] data32;
 reg [31:0] data32temp;
-
-
-parameter t_38k    = 12'd3289;//125MHz/38kHz
-parameter t_38k_half = 12'd1644;
-parameter t_9ms    = 21'd1125000;//125MHz*9ms
-parameter t_4_5ms  = 20'd562500;
-parameter t_13_5ms = 21'd1687500;
-parameter t_20000us = 22'd2500000;
-parameter t_20750us = 22'd2575000;
-parameter t_750us = 17'd75000;
-parameter t_450us = 16'd75000;
-parameter t_1500us = 18'd200000;
-parameter t_1200us = 18'd150000;
-parameter t_2250us = 19'd275000;
-
 
 // parameter t_38k    = 12'd2631;//100MHz/38kHz
 // parameter t_38k_half = 12'd1316;
@@ -49,6 +32,20 @@ parameter t_2250us = 19'd275000;
 // parameter t_1200us = 18'd120000;
 // parameter t_2250us = 19'd225000;
 // PS 100MHz
+
+parameter t_38k    = 12'd3289;//125MHz/38kHz
+parameter t_38k_half = 12'd1644;
+parameter t_9ms    = 21'd1125000;//125MHz*9ms
+parameter t_4_5ms  = 20'd562500;
+parameter t_13_5ms = 21'd1687500;
+parameter t_20000us = 22'd2500000;
+parameter t_20750us = 22'd2575000;
+parameter t_750us = 17'd75000;
+parameter t_450us = 16'd75000;
+parameter t_1500us = 18'd200000;
+parameter t_1200us = 18'd150000;
+parameter t_2250us = 19'd275000;
+
 //----------------------------------------------//
 reg  [12:0] cnt1;
 wire  clk_38k;
@@ -131,7 +128,7 @@ always @(posedge clk)
                                     if(data32temp != data32)//
                                         begin//
                                             data35 <= IR_in_data35;
-                                            data32 <= IR_data32;
+                                            data32 <= IR_in_data32;
                                             state <= START;
                                             idel_flag <= 1;
                                         end

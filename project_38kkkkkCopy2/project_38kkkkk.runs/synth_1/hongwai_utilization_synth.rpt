@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sun Jun 10 14:30:19 2018
+| Date         : Sun Jun 10 15:51:33 2018
 | Host         : AmuroPC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file hongwai_utilization_synth.rpt -pb hongwai_utilization_synth.pb
 | Design       : hongwai
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  245 |     0 |     53200 |  0.46 |
-|   LUT as Logic          |  245 |     0 |     53200 |  0.46 |
+| Slice LUTs*             |  249 |     0 |     53200 |  0.47 |
+|   LUT as Logic          |  249 |     0 |     53200 |  0.47 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
 | Slice Registers         |  112 |     0 |    106400 |  0.11 |
 |   Register as Flip Flop |  112 |     0 |    106400 |  0.11 |
@@ -54,10 +54,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 2     |          Yes |           - |          Set |
-| 104   |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 6     |          Yes |       Reset |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 2     |          Yes |         Set |            - |
+| 110   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,18 +146,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |  104 |        Flop & Latch |
-| LUT1     |   89 |                 LUT |
-| LUT3     |   87 |                 LUT |
+| FDRE     |  110 |        Flop & Latch |
+| LUT1     |   91 |                 LUT |
+| LUT2     |   61 |                 LUT |
 | LUT6     |   60 |                 LUT |
-| LUT4     |   26 |                 LUT |
+| LUT3     |   44 |                 LUT |
+| LUT4     |   25 |                 LUT |
 | CARRY4   |   25 |          CarryLogic |
-| LUT5     |   24 |                 LUT |
-| LUT2     |   12 |                 LUT |
-| FDRE     |    6 |        Flop & Latch |
+| LUT5     |   21 |                 LUT |
 | IBUF     |    3 |                  IO |
 | OBUF     |    2 |                  IO |
-| FDPE     |    2 |        Flop & Latch |
+| FDSE     |    2 |        Flop & Latch |
 | MUXF7    |    1 |               MuxFx |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
