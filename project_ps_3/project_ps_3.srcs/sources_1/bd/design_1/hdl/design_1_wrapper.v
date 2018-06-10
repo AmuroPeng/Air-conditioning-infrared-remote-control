@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Sun Jun 10 01:09:47 2018
+//Date        : Sun Jun 10 11:03:28 2018
 //Host        : AmuroPC running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -33,8 +33,7 @@ module design_1_wrapper
     FIXED_IO_ps_srstb,
     IR_out,
     key_1,
-    led_out,
-    reset_rtl);
+    led_out);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -59,7 +58,6 @@ module design_1_wrapper
   output IR_out;
   input key_1;
   output led_out;
-  input reset_rtl;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -85,7 +83,6 @@ module design_1_wrapper
   wire IR_out;
   wire key_1;
   wire led_out;
-  wire reset_rtl;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -111,6 +108,5 @@ module design_1_wrapper
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .IR_out(IR_out),
         .key_1(key_1),
-        .led_out(led_out),
-        .reset_rtl(reset_rtl));
+        .led_out(led_out));
 endmodule

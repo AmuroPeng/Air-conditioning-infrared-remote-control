@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Sun Jun 10 01:09:47 2018
+//Date        : Sun Jun 10 11:03:27 2018
 //Host        : AmuroPC running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,da_axi4_cnt=1,da_board_cnt=1,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipProduct=Vivado 2015.2,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,da_axi4_cnt=2,da_board_cnt=1,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -34,8 +34,7 @@ module design_1
     FIXED_IO_ps_srstb,
     IR_out,
     key_1,
-    led_out,
-    reset_rtl);
+    led_out);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -60,15 +59,12 @@ module design_1
   output IR_out;
   input key_1;
   output led_out;
-  input reset_rtl;
 
   wire GND_1;
   wire IR_v1_0_0_IR_out;
   wire IR_v1_0_0_led_out;
   wire VCC_1;
   wire key_1_1;
-  wire [0:0]proc_sys_reset_0_interconnect_aresetn;
-  wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -85,6 +81,7 @@ module design_1
   wire processing_system7_0_DDR_RESET_N;
   wire processing_system7_0_DDR_WE_N;
   wire processing_system7_0_FCLK_CLK0;
+  wire processing_system7_0_FCLK_RESET0_N;
   wire processing_system7_0_FIXED_IO_DDR_VRN;
   wire processing_system7_0_FIXED_IO_DDR_VRP;
   wire [53:0]processing_system7_0_FIXED_IO_MIO;
@@ -148,21 +145,21 @@ module design_1
   wire processing_system7_0_axi_periph_M00_AXI_WREADY;
   wire [3:0]processing_system7_0_axi_periph_M00_AXI_WSTRB;
   wire processing_system7_0_axi_periph_M00_AXI_WVALID;
-  wire reset_rtl_1;
+  wire [0:0]rst_processing_system7_0_50M_interconnect_aresetn;
+  wire [0:0]rst_processing_system7_0_50M_peripheral_aresetn;
 
   assign IR_out = IR_v1_0_0_IR_out;
   assign key_1_1 = key_1;
   assign led_out = IR_v1_0_0_led_out;
-  assign reset_rtl_1 = reset_rtl;
   GND GND
        (.G(GND_1));
-  design_1_IR_v1_0_0_0 IR_v1_0_0
+  design_1_IR_v1_0_0_1 IR_v1_0_0
        (.IR_out(IR_v1_0_0_IR_out),
         .key_1(key_1_1),
         .led_out(IR_v1_0_0_led_out),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(processing_system7_0_axi_periph_M00_AXI_ARADDR),
-        .s00_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .s00_axi_aresetn(rst_processing_system7_0_50M_peripheral_aresetn),
         .s00_axi_arprot(processing_system7_0_axi_periph_M00_AXI_ARPROT),
         .s00_axi_arready(processing_system7_0_axi_periph_M00_AXI_ARREADY),
         .s00_axi_arvalid(processing_system7_0_axi_periph_M00_AXI_ARVALID),
@@ -183,15 +180,7 @@ module design_1
         .s00_axi_wvalid(processing_system7_0_axi_periph_M00_AXI_WVALID));
   VCC VCC
        (.P(VCC_1));
-  design_1_proc_sys_reset_0_0 proc_sys_reset_0
-       (.aux_reset_in(VCC_1),
-        .dcm_locked(VCC_1),
-        .ext_reset_in(reset_rtl_1),
-        .interconnect_aresetn(proc_sys_reset_0_interconnect_aresetn),
-        .mb_debug_sys_rst(GND_1),
-        .peripheral_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
-  design_1_processing_system7_0_0 processing_system7_0
+  design_1_processing_system7_0_1 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
         .DDR_CAS_n(DDR_cas_n),
@@ -210,6 +199,7 @@ module design_1
         .DDR_VRP(FIXED_IO_ddr_vrp),
         .DDR_WEB(DDR_we_n),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
+        .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARADDR(processing_system7_0_M_AXI_GP0_ARADDR),
@@ -252,13 +242,12 @@ module design_1
         .M_AXI_GP0_WVALID(processing_system7_0_M_AXI_GP0_WVALID),
         .PS_CLK(FIXED_IO_ps_clk),
         .PS_PORB(FIXED_IO_ps_porb),
-        .PS_SRSTB(FIXED_IO_ps_srstb),
-        .USB0_VBUS_PWRFAULT(GND_1));
-  design_1_processing_system7_0_axi_periph_0 processing_system7_0_axi_periph
+        .PS_SRSTB(FIXED_IO_ps_srstb));
+  design_1_processing_system7_0_axi_periph_1 processing_system7_0_axi_periph
        (.ACLK(processing_system7_0_FCLK_CLK0),
-        .ARESETN(proc_sys_reset_0_interconnect_aresetn),
+        .ARESETN(rst_processing_system7_0_50M_interconnect_aresetn),
         .M00_ACLK(processing_system7_0_FCLK_CLK0),
-        .M00_ARESETN(proc_sys_reset_0_peripheral_aresetn),
+        .M00_ARESETN(rst_processing_system7_0_50M_peripheral_aresetn),
         .M00_AXI_araddr(processing_system7_0_axi_periph_M00_AXI_ARADDR),
         .M00_AXI_arprot(processing_system7_0_axi_periph_M00_AXI_ARPROT),
         .M00_AXI_arready(processing_system7_0_axi_periph_M00_AXI_ARREADY),
@@ -279,7 +268,7 @@ module design_1
         .M00_AXI_wstrb(processing_system7_0_axi_periph_M00_AXI_WSTRB),
         .M00_AXI_wvalid(processing_system7_0_axi_periph_M00_AXI_WVALID),
         .S00_ACLK(processing_system7_0_FCLK_CLK0),
-        .S00_ARESETN(proc_sys_reset_0_peripheral_aresetn),
+        .S00_ARESETN(rst_processing_system7_0_50M_peripheral_aresetn),
         .S00_AXI_araddr(processing_system7_0_M_AXI_GP0_ARADDR),
         .S00_AXI_arburst(processing_system7_0_M_AXI_GP0_ARBURST),
         .S00_AXI_arcache(processing_system7_0_M_AXI_GP0_ARCACHE),
@@ -318,9 +307,17 @@ module design_1
         .S00_AXI_wready(processing_system7_0_M_AXI_GP0_WREADY),
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID));
+  design_1_rst_processing_system7_0_50M_0 rst_processing_system7_0_50M
+       (.aux_reset_in(VCC_1),
+        .dcm_locked(VCC_1),
+        .ext_reset_in(processing_system7_0_FCLK_RESET0_N),
+        .interconnect_aresetn(rst_processing_system7_0_50M_interconnect_aresetn),
+        .mb_debug_sys_rst(GND_1),
+        .peripheral_aresetn(rst_processing_system7_0_50M_peripheral_aresetn),
+        .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
 endmodule
 
-module design_1_processing_system7_0_axi_periph_0
+module design_1_processing_system7_0_axi_periph_1
    (ACLK,
     ARESETN,
     M00_ACLK,

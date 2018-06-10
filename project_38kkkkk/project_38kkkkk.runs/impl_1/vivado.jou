@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun Jun 10 11:48:08 2018
+# Process ID: 15144
+# Log file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_38kkkkk/project_38kkkkk.runs/impl_1/hongwai.vdi
+# Journal file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_38kkkkk/project_38kkkkk.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source hongwai.tcl -notrace

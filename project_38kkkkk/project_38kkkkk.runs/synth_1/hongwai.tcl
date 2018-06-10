@@ -14,6 +14,7 @@ set_property parent.project_path D:/5Project/PYNQ/Air-conditioning-infrared-remo
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
+  d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR_1.2/IR_1.2
   d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR_1.1/IR_1.1
   d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/ip_repo_IR/IR_1.0
 } [current_project]

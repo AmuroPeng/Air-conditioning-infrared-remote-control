@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sun Jun 10 01:17:16 2018
+| Date         : Sun Jun 10 11:04:44 2018
 | Host         : AmuroPC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1071 |     0 |     53200 |  2.01 |
-|   LUT as Logic             | 1001 |     0 |     53200 |  1.88 |
+| Slice LUTs*                | 1076 |     0 |     53200 |  2.02 |
+|   LUT as Logic             | 1006 |     0 |     53200 |  1.89 |
 |   LUT as Memory            |   70 |     0 |     17400 |  0.40 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   70 |     0 |           |       |
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 2     |          Yes |           - |          Set |
-| 104   |          Yes |           - |        Reset |
-| 65    |          Yes |         Set |            - |
-| 785   |          Yes |       Reset |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 67    |          Yes |         Set |            - |
+| 889   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+--------+
 |          Site Type          | Used | Fixed | Available |  Util% |
 +-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  |    4 |     0 |       125 |   3.20 |
+| Bonded IOB                  |    3 |     0 |       125 |   2.40 |
 | Bonded IPADs                |    0 |     0 |         2 |   0.00 |
 | Bonded IOPADs               |  130 |     0 |       130 | 100.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |   0.00 |
@@ -148,23 +148,21 @@ Table of Contents
 +----------+------+----------------------+
 | Ref Name | Used |  Functional Category |
 +----------+------+----------------------+
-| FDRE     |  785 |         Flop & Latch |
-| LUT6     |  361 |                  LUT |
-| LUT3     |  316 |                  LUT |
-| LUT1     |  247 |                  LUT |
-| LUT5     |  157 |                  LUT |
+| FDRE     |  889 |         Flop & Latch |
+| LUT3     |  295 |                  LUT |
+| LUT5     |  267 |                  LUT |
+| LUT1     |  249 |                  LUT |
+| LUT6     |  245 |                  LUT |
 | BIBUF    |  130 |                   IO |
-| FDCE     |  104 |         Flop & Latch |
-| LUT4     |   66 |                  LUT |
-| FDSE     |   65 |         Flop & Latch |
+| LUT4     |   80 |                  LUT |
+| FDSE     |   67 |         Flop & Latch |
+| LUT2     |   65 |                  LUT |
 | SRLC32E  |   47 |   Distributed Memory |
 | CARRY4   |   47 |           CarryLogic |
-| LUT2     |   43 |                  LUT |
 | SRL16E   |   23 |   Distributed Memory |
 | OBUF     |    2 |                   IO |
-| IBUF     |    2 |                   IO |
-| FDPE     |    2 |         Flop & Latch |
 | PS7      |    1 | Specialized Resource |
+| IBUF     |    1 |                   IO |
 | BUFG     |    1 |                Clock |
 +----------+------+----------------------+
 

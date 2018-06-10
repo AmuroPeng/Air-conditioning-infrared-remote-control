@@ -1,40 +1,34 @@
 `timescale 1ns / 1ps
-module hongwai(clk,rst,key_1,IR_in_data35_1,IR_in_data35_0,IR_in_data32,IR_out,led_out);
+module hongwai(clk,rst,key_1,IR_out,IR_outt,led_out);
 input clk;
 input rst;
 input key_1; //开关
-input [31:0] IR_in_data35_1;
-input [2:0] IR_in_data35_0;
-input [31:0] IR_in_data32;
+wire [34:0] IR_in_data35;
+wire [32:0] IR_in_data32;
 output IR_out;
 output led_out; //完全输出一条指令后让led亮一次
-// output IR_outt;
+output IR_outt;
 // output IR_outt_rev;
-
-wire [32:0] IR_data32;
-assign IR_data32 = {IR_in_data32,0};
-wire IR_in_data35;
-assign IR_in_data35 = {IR_in_data35_1,IR_in_data35_0};
 
 reg led;
 reg [34:0] data35;
 reg [32:0] data32;
 reg [32:0] data32temp;
 
-parameter t_38k    = 12'd2631;//100MHz/38kHz
-parameter t_38k_half = 12'd1316;
-parameter t_9ms    = 21'd9000000;//100MHz*9ms
-parameter t_4_5ms  = 20'd450000;
-parameter t_13_5ms = 21'd1350000;
-parameter t_20000us = 22'd2000000;
-parameter t_20750us = 22'd2075000;
-parameter t_750us = 17'd75000;
-parameter t_450us = 16'd45000;
-parameter t_1500us = 18'd150000;
-parameter t_1200us = 18'd120000;
-parameter t_2250us = 19'd225000;
+parameter t_38k    = 12'd3289;//125MHz/38kHz
+parameter t_38k_half = 12'd1644;
+parameter t_9ms    = 21'd1125000;//125MHz*9ms
+parameter t_4_5ms  = 20'd562500;
+parameter t_13_5ms = 21'd1687500;
+parameter t_20000us = 22'd2500000;
+parameter t_20750us = 22'd2593750;
+parameter t_750us = 17'd93750;
+parameter t_450us = 16'd56250;
+parameter t_1500us = 18'd187500;
+parameter t_1200us = 18'd150000;
+parameter t_2250us = 19'd281250;
 
-// PS 100MHz
+// 按照网上的关于YB0F2遥控器的编码协议
 // parameter t_38k    = 12'd3289;//125MHz/38kHz
 // parameter t_38k_half = 12'd1644;
 // parameter t_9ms    = 21'd1125000;//125MHz*9ms
@@ -122,7 +116,7 @@ always @(posedge clk or negedge rst)
                                 begin
                                     state <= START;    
                                     data35 <= 35'b10000010000100000000010000001010010;
-                                    data32 <= 32'b000010000000010000000000000001100;
+                                    data32 <= 33'b000010000000010000000000000001100;
                                     idel_flag <= 0;
                                 end
                             else 
@@ -130,7 +124,7 @@ always @(posedge clk or negedge rst)
                                     if(data32temp != data32)//两者一致说明没有新指令传入，不一样则说明需要进行调制并输出了
                                         begin//好气哦忘记加begin&end了，导致之后的else老报错，debug半天T_T
                                             data35 <= IR_in_data35;
-                                            data32 <= IR_data32;
+                                            data32 <= IR_in_data32;
                                             state <= START;
                                             idel_flag <= 1;
                                         end
@@ -312,9 +306,10 @@ assign one_flag = (one_en&&(cnt4 >= t_750us))?1:0;
 wire   ir_out;
 wire  IR_outt_rev;
 assign ir_out = start_flag||zero_flag||one_flag||connect_flag||idel_flag;
-assign IR_out = (~ir_out)&&clk_38k;//38k载波是在低电平时才调制，所以要与上ir_out的非
+assign IR_out = ir_out;
 // assign IR_outt_rev = ~IR_outt;
-// assign IR_outt = (~ir_out)&&clk_38k;
+assign IR_outt = (~ir_out)&&clk_38k;//38k载波是在低电平时才调制，所以要与上ir_out的非
+
 assign led_out = led;
 
 endmodule
