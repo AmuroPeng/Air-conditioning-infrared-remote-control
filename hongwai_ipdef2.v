@@ -21,7 +21,7 @@ reg [31:0] data32temp;
 
 parameter t_38k    = 12'd2631;//100MHz/38kHz
 parameter t_38k_half = 12'd1316;
-parameter t_9ms    = 21'd9000000;//100MHz*9ms
+parameter t_9ms    = 21'd900000;//100MHz*9ms
 parameter t_4_5ms  = 20'd450000;
 parameter t_13_5ms = 21'd1350000;
 parameter t_20000us = 22'd2000000;

@@ -2,8 +2,8 @@
 # Vivado v2015.2 (64-bit)
 # SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
 # IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
-# Start of session at: Sun Jun 10 15:42:06 2018
-# Process ID: 14992
+# Start of session at: Sun Jun 10 16:30:54 2018
+# Process ID: 552
 # Log file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.runs/synth_1/design_1_wrapper.vds
 # Journal file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
@@ -15,27 +15,26 @@ Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-WARNING: [Synth 8-2292] literal value truncated to fit in 21 bits [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/hongwai.v:24]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 314.203 ; gain = 141.723
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 307.477 ; gain = 134.859
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-638] synthesizing module 'design_1' [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/hdl/design_1.v:13]
 INFO: [Synth 8-638] synthesizing module 'GND' [D:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3854]
 INFO: [Synth 8-256] done synthesizing module 'GND' (1#1) [D:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3854]
 INFO: [Synth 8-638] synthesizing module 'design_1_IR_v1_0_0_1' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/ip/design_1_IR_v1_0_0_1/synth/design_1_IR_v1_0_0_1.v:57]
-INFO: [Synth 8-638] synthesizing module 'IR_v1_0' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0.v:4]
+INFO: [Synth 8-638] synthesizing module 'IR_v1_0' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/90b63a55/src/IR_v1_0.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'IR_v1_0_S00_AXI' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'IR_v1_0_S00_AXI' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/90b63a55/src/IR_v1_0_S00_AXI.v:4]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'hongwai' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/hongwai.v:2]
+INFO: [Synth 8-638] synthesizing module 'hongwai' [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/90b63a55/src/hongwai.v:2]
 	Parameter t_38k bound to: 12'b101001000111 
 	Parameter t_38k_half bound to: 12'b010100100100 
-	Parameter t_9ms bound to: 21'b010010101010001000000 
+	Parameter t_9ms bound to: 21'b011011011101110100000 
 	Parameter t_4_5ms bound to: 20'b01101101110111010000 
 	Parameter t_13_5ms bound to: 21'b101001001100101110000 
 	Parameter t_20000us bound to: 22'b0111101000010010000000 
@@ -50,11 +49,11 @@ INFO: [Synth 8-638] synthesizing module 'hongwai' [d:/5Project/PYNQ/Air-conditio
 	Parameter SEND_35 bound to: 3'b010 
 	Parameter CONNECT bound to: 3'b011 
 	Parameter SEND_32 bound to: 3'b100 
-INFO: [Synth 8-256] done synthesizing module 'hongwai' (2#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/hongwai.v:2]
-INFO: [Synth 8-226] default block is never used [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0_S00_AXI.v:227]
-INFO: [Synth 8-226] default block is never used [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0_S00_AXI.v:368]
-INFO: [Synth 8-256] done synthesizing module 'IR_v1_0_S00_AXI' (3#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-256] done synthesizing module 'IR_v1_0' (4#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/fc503ba0/src/IR_v1_0.v:4]
+INFO: [Synth 8-256] done synthesizing module 'hongwai' (2#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/90b63a55/src/hongwai.v:2]
+INFO: [Synth 8-226] default block is never used [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/90b63a55/src/IR_v1_0_S00_AXI.v:227]
+INFO: [Synth 8-226] default block is never used [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/90b63a55/src/IR_v1_0_S00_AXI.v:368]
+INFO: [Synth 8-256] done synthesizing module 'IR_v1_0_S00_AXI' (3#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/90b63a55/src/IR_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-256] done synthesizing module 'IR_v1_0' (4#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/ir_v1_0_v1_0/90b63a55/src/IR_v1_0.v:4]
 INFO: [Synth 8-256] done synthesizing module 'design_1_IR_v1_0_0_1' (5#1) [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/ip/design_1_IR_v1_0_0_1/synth/design_1_IR_v1_0_0_1.v:57]
 INFO: [Synth 8-638] synthesizing module 'VCC' [D:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:35496]
 INFO: [Synth 8-256] done synthesizing module 'VCC' (6#1) [D:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:35496]
@@ -928,7 +927,7 @@ WARNING: [Synth 8-350] instance 'rst_processing_system7_0_50M' of module 'design
 INFO: [Synth 8-256] done synthesizing module 'design_1' (38#1) [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/hdl/design_1.v:13]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (39#1) [D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 429.074 ; gain = 256.594
+Finished RTL Elaboration : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 429.086 ; gain = 256.469
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -938,10 +937,10 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 429.074 ; gain = 256.594
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 429.086 ; gain = 256.469
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -974,16 +973,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 680.484 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 680.602 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 680.484 ; gain = 508.004
+Finished Constraint Validation : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 680.602 ; gain = 507.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 680.484 ; gain = 508.004
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 680.602 ; gain = 507.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -996,7 +995,7 @@ Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_p
 Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/rst_processing_system7_0_50M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 680.484 ; gain = 508.004
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:05 . Memory (MB): peak = 680.602 ; gain = 507.984
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'hongwai'
 INFO: [Synth 8-5545] ROM "start_over" won't be mapped to RAM because address size (21) is larger than maximum supported(18)
@@ -1021,7 +1020,7 @@ INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [d:/5
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'hongwai'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 680.484 ; gain = 508.004
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:08 . Memory (MB): peak = 680.602 ; gain = 507.984
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1311,7 +1310,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 680.484 ; gain = 508.004
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:05 ; elapsed = 00:01:08 . Memory (MB): peak = 680.602 ; gain = 507.984
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -1322,9 +1321,9 @@ INFO: [Synth 8-5545] ROM "inst/IR_v1_0_S00_AXI_inst/u0/connect_over" won't be ma
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [d:/5Project/PYNQ/Air-conditioning-infrared-remote-control/project_ps_3/project_ps_3.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/03a8e0ba/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 680.484 ; gain = 508.004
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 680.602 ; gain = 507.984
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 680.484 ; gain = 508.004
+Finished Parallel Reinference  : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 680.602 ; gain = 507.984
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -1335,16 +1334,16 @@ Report RTL Partitions:
 Start Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 680.484 ; gain = 508.004
+Finished Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 680.602 ; gain = 507.984
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 680.484 ; gain = 508.004
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 680.602 ; gain = 507.984
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 680.484 ; gain = 508.004
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 680.602 ; gain = 507.984
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -1352,10 +1351,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 819.391 ; gain = 646.910
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:20 ; elapsed = 00:01:25 . Memory (MB): peak = 819.660 ; gain = 647.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:27 . Memory (MB): peak = 836.391 ; gain = 663.910
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:25 . Memory (MB): peak = 835.660 ; gain = 663.043
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1428,7 +1427,7 @@ INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/G
 INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5 ) is unused and will be removed from module design_1_rst_processing_system7_0_50M_0.
 INFO: [Synth 8-3332] Sequential element (\U0/EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6 ) is unused and will be removed from module design_1_rst_processing_system7_0_50M_0.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 854.270 ; gain = 681.789
+Finished Technology Mapping : Time (s): cpu = 00:01:23 ; elapsed = 00:01:27 . Memory (MB): peak = 854.246 ; gain = 681.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1468,7 +1467,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \inst/gen_axili
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:01:32 . Memory (MB): peak = 854.270 ; gain = 681.789
+Finished IO Insertion : Time (s): cpu = 00:01:24 ; elapsed = 00:01:29 . Memory (MB): peak = 854.246 ; gain = 681.629
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1481,7 +1480,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:28 ; elapsed = 00:01:32 . Memory (MB): peak = 854.270 ; gain = 681.789
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:24 ; elapsed = 00:01:29 . Memory (MB): peak = 854.246 ; gain = 681.629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1493,13 +1492,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:28 ; elapsed = 00:01:33 . Memory (MB): peak = 854.270 ; gain = 681.789
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 854.246 ; gain = 681.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:28 ; elapsed = 00:01:33 . Memory (MB): peak = 854.270 ; gain = 681.789
+Start Renaming Generated Ports : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 854.246 ; gain = 681.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:29 ; elapsed = 00:01:33 . Memory (MB): peak = 854.270 ; gain = 681.789
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 854.246 ; gain = 681.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1536,14 +1535,14 @@ Report Cell Usage:
 |2     |BUFG    |     1|
 |3     |CARRY4  |    41|
 |4     |GND     |     1|
-|5     |LUT1    |   249|
-|6     |LUT2    |    60|
-|7     |LUT3    |   300|
-|8     |LUT4    |    68|
-|9     |LUT5    |   282|
-|10    |LUT6    |   265|
+|5     |LUT1    |   250|
+|6     |LUT2    |    73|
+|7     |LUT3    |   293|
+|8     |LUT4    |    73|
+|9     |LUT5    |   281|
+|10    |LUT6    |   247|
 |11    |MUXCY_L |    22|
-|12    |MUXF7   |     5|
+|12    |MUXF7   |     4|
 |13    |PS7     |     1|
 |14    |SRL16   |     1|
 |15    |SRL16E  |    22|
@@ -1561,12 +1560,12 @@ Report Instance Areas:
 +------+---------------------------------------------------+------------------------------------------------------------+------+
 |      |Instance                                           |Module                                                      |Cells |
 +------+---------------------------------------------------+------------------------------------------------------------+------+
-|1     |top                                                |                                                            |  2533|
-|2     |  design_1_i                                       |design_1                                                    |  2530|
-|3     |    IR_v1_0_0                                      |design_1_IR_v1_0_0_1                                        |   906|
-|4     |      inst                                         |IR_v1_0                                                     |   906|
-|5     |        IR_v1_0_S00_AXI_inst                       |IR_v1_0_S00_AXI                                             |   906|
-|6     |          u0                                       |hongwai                                                     |   562|
+|1     |top                                                |                                                            |  2525|
+|2     |  design_1_i                                       |design_1                                                    |  2522|
+|3     |    IR_v1_0_0                                      |design_1_IR_v1_0_0_1                                        |   898|
+|4     |      inst                                         |IR_v1_0                                                     |   898|
+|5     |        IR_v1_0_S00_AXI_inst                       |IR_v1_0_S00_AXI                                             |   898|
+|6     |          u0                                       |hongwai                                                     |   554|
 |7     |    processing_system7_0                           |design_1_processing_system7_0_1                             |   244|
 |8     |      inst                                         |processing_system7_v5_5_processing_system7                  |   244|
 |9     |    processing_system7_0_axi_periph                |design_1_processing_system7_0_axi_periph_1                  |  1310|
@@ -1604,11 +1603,11 @@ Report Instance Areas:
 |41    |          SEQ_COUNTER                              |upcnt_n                                                     |    14|
 +------+---------------------------------------------------+------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:29 ; elapsed = 00:01:33 . Memory (MB): peak = 854.270 ; gain = 681.789
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 854.246 ; gain = 681.629
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:01:18 . Memory (MB): peak = 854.270 ; gain = 353.738
-Synthesis Optimization Complete : Time (s): cpu = 00:01:29 ; elapsed = 00:01:33 . Memory (MB): peak = 854.270 ; gain = 681.789
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:01:14 . Memory (MB): peak = 854.246 ; gain = 353.512
+Synthesis Optimization Complete : Time (s): cpu = 00:01:25 ; elapsed = 00:01:30 . Memory (MB): peak = 854.246 ; gain = 681.629
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 97 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1621,8 +1620,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-240 Infos, 5 Warnings, 2 Critical Warnings and 0 Errors encountered.
+240 Infos, 4 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 854.270 ; gain = 606.273
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 854.270 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 10 15:43:44 2018...
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 854.246 ; gain = 606.086
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 854.246 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 10 16:32:27 2018...

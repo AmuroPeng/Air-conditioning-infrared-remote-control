@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Sun Jun 10 15:45:29 2018
+| Date             : Sun Jun 10 16:33:53 2018
 | Host             : AmuroPC running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb
 | Design           : design_1_wrapper
@@ -49,15 +49,15 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.002 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     1999 |       --- |             --- |
-|   LUT as Logic          |     0.001 |      708 |     53200 |            1.33 |
+| Clocks                  |     0.003 |        3 |       --- |             --- |
+| Slice Logic             |     0.001 |     1990 |       --- |             --- |
+|   LUT as Logic          |     0.001 |      699 |     53200 |            1.31 |
 |   Register              |    <0.001 |      834 |    106400 |            0.78 |
 |   CARRY4                |    <0.001 |       35 |     13300 |            0.26 |
 |   LUT as Shift Register |    <0.001 |       64 |     17400 |            0.37 |
-|   F7/F8 Muxes           |    <0.001 |        5 |     53200 |           <0.01 |
+|   F7/F8 Muxes           |    <0.001 |        4 |     53200 |           <0.01 |
 |   Others                |     0.000 |      187 |       --- |             --- |
-| Signals                 |     0.001 |     1396 |       --- |             --- |
+| Signals                 |     0.001 |     1388 |       --- |             --- |
 | I/O                     |    <0.001 |        3 |       125 |            2.40 |
 | PS7                     |     1.525 |        1 |       --- |             --- |
 | Static Power            |     0.152 |          |           |                 |
@@ -152,7 +152,7 @@ Table of Contents
 |     IR_v1_0_0                                    |     0.002 |
 |       inst                                       |     0.002 |
 |         IR_v1_0_S00_AXI_inst                     |     0.002 |
-|           u0                                     |     0.001 |
+|           u0                                     |    <0.001 |
 |     processing_system7_0                         |     1.525 |
 |       inst                                       |     1.525 |
 |     processing_system7_0_axi_periph              |     0.003 |
