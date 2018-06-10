@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Sun Jun 10 11:07:03 2018
+| Date             : Sun Jun 10 13:31:38 2018
 | Host             : AmuroPC running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb
 | Design           : design_1_wrapper
@@ -50,13 +50,13 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.002 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     1917 |       --- |             --- |
-|   LUT as Logic          |     0.001 |      682 |     53200 |            1.28 |
-|   Register              |    <0.001 |      780 |    106400 |            0.73 |
+| Slice Logic             |     0.001 |     1915 |       --- |             --- |
+|   LUT as Logic          |     0.001 |      689 |     53200 |            1.30 |
+|   Register              |    <0.001 |      779 |    106400 |            0.73 |
 |   CARRY4                |    <0.001 |       35 |     13300 |            0.26 |
 |   LUT as Shift Register |    <0.001 |       64 |     17400 |            0.37 |
-|   Others                |     0.000 |      187 |       --- |             --- |
-| Signals                 |     0.001 |     1328 |       --- |             --- |
+|   Others                |     0.000 |      188 |       --- |             --- |
+| Signals                 |     0.001 |     1323 |       --- |             --- |
 | I/O                     |    <0.001 |        3 |       125 |            2.40 |
 | PS7                     |     1.525 |        1 |       --- |             --- |
 | Static Power            |     0.152 |          |           |                 |

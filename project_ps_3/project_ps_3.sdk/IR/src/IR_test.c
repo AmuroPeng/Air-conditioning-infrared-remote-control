@@ -17,7 +17,7 @@ int main()
 	long a = 0;
 	int b = 2;
 	int c = 0;
-//	while(1){
+	while(1){
 //		if(cnt==0){
 //			a = 2454717450;
 //			c = 134479872;
@@ -32,7 +32,7 @@ int main()
 //	Xil_Out32(XPAR_IR_V1_0_0_BASEADDR+4,b);
 //	Xil_Out32(XPAR_IR_V1_0_0_BASEADDR+8,c);
 //	usleep(1000000);
-//	}
+	}
 	return 0;
 }
 
