@@ -1,8 +1,9 @@
 `timescale 1ns / 1ps
-module hongwai(clk,rst,key_1,IR_out,led_out);
+module hongwai(clk,rst,key_1,key_2,IR_out,led_out);
 input clk;
 input rst;
 input key_1; //
+input key_2;
 wire [31:0] IR_in_data35_1;
 wire [2:0] IR_in_data35_0;
 wire [31:0] IR_in_data32;

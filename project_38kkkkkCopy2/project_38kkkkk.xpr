@@ -12,6 +12,7 @@
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo_IR_2/IR_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo_IR_1.2/IR_1.2"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo_IR_1.1/IR_1.1"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo_IR/IR_1.0"/>
