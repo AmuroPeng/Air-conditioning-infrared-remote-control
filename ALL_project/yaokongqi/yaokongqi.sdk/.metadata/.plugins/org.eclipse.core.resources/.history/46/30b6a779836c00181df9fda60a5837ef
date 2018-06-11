@@ -1,0 +1,50 @@
+/*
+ * hb.h
+ *
+ *  Created on: 2018Äê6ÔÂ10ÈÕ
+ *      Author: pleco
+ */
+
+#ifndef HB_H_
+#define HB_H_
+
+
+/***************************** Include Files *********************************/
+
+#include "xparameters.h"
+#include "xstatus.h"
+#include "xuartlite.h"
+#include "xil_printf.h"
+#include "sleep.h"
+
+#define TEST_BUFFER_SIZE 6
+#define RECEIVE_BUFFER_SIZE 6
+
+int UartLitePolledExample(u16 DeviceId);
+
+XUartLite UartLite;		/* Instance of the UartLite Device */
+
+u8 SendBuffer[TEST_BUFFER_SIZE];	/* Buffer for Transmitting Data */
+u8 RecvBuffer[RECEIVE_BUFFER_SIZE];	/* Buffer for Receiving Data */
+
+/*int hb(void)
+{
+	int Status;
+
+	Status = UartLitePolledExample(XPAR_AXI_UARTLITE_0_BASEADDR);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Uartlite polled Example Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	xil_printf("Successfully ran Uartlite polled Example\r\n");
+	return XST_SUCCESS;
+
+}*/
+
+
+
+
+
+
+#endif /* HB_H_ */

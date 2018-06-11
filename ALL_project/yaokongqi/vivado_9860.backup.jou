@@ -1,0 +1,222 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun Jun 10 08:39:33 2018
+# Process ID: 13348
+# Log file: G:/temp/yaokongqi/vivado.log
+# Journal file: G:/temp/yaokongqi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project G:/temp/yaokongqi/yaokongqi.xpr
+open_bd_design {G:/temp/yaokongqi/yaokongqi.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_GPIO_EMIO_GPIO_ENABLE {1} CONFIG.PCW_GPIO_EMIO_GPIO_IO {5}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+create_bd_port -dir O -from 4 -to 0 GPIO_O
+connect_bd_net [get_bd_pins /processing_system7_0/GPIO_O] [get_bd_ports GPIO_O]
+endgroup
+validate_bd_design
+generate_target all [get_files  G:/temp/yaokongqi/yaokongqi.srcs/sources_1/bd/design_1/design_1.bd]
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+open_run impl_1
+place_ports {GPIO_O[0]} V13
+place_ports {GPIO_O[1]} V15
+place_ports {GPIO_O[2]} T15
+place_ports {GPIO_O[3]} R16
+place_ports {GPIO_O[4]} U17
+save_constraints
+set_property IOSTANDARD LVCMOS33 [get_ports [list {GPIO_O[4]} {GPIO_O[3]} {GPIO_O[2]} {GPIO_O[1]} {GPIO_O[0]}]]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+write_hwdef -force  -file G:/temp/yaokongqi/yaokongqi.sdk/design_1_wrapper.hdf
+launch_sdk -workspace G:/temp/yaokongqi/yaokongqi.sdk -hwspec G:/temp/yaokongqi/yaokongqi.sdk/design_1_wrapper.hdf
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+open_hw_target
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+open_bd_design {G:/temp/yaokongqi/yaokongqi.srcs/sources_1/bd/design_1/design_1.bd}
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+launch_sdk -workspace G:/temp/yaokongqi/yaokongqi.sdk -hwspec G:/temp/yaokongqi/yaokongqi.sdk/design_1_wrapper.hdf
+close_hw_target
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+open_hw_target
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+launch_sdk -workspace G:/temp/yaokongqi/yaokongqi.sdk -hwspec G:/temp/yaokongqi/yaokongqi.sdk/design_1_wrapper.hdf
+close_hw_target
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+open_hw_target
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+close_hw_target
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+open_hw_target
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+launch_sdk -workspace G:/temp/yaokongqi/yaokongqi.sdk -hwspec G:/temp/yaokongqi/yaokongqi.sdk/design_1_wrapper.hdf
+startgroup
+set_property package_pin "" [get_ports [list  {GPIO_O[2]}]]
+place_ports Data T15
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {GPIO_O[3]}]]
+place_ports UART_txd R16
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {GPIO_O[4]}]]
+place_ports UART_rxd U17
+endgroup
+place_ports {GPIO_O[1]} U12
+place_ports {GPIO_O[2]} U13
+startgroup
+set_property package_pin "" [get_ports [list  {GPIO_O[0]}]]
+place_ports {GPIO_O[3]} V13
+endgroup
+place_ports {GPIO_O[0]} T14
+set_property package_pin "" [get_ports [list  {GPIO_O[4]}]]
+set_property package_pin "" [get_ports [list  {GPIO_O[4]}]]
+startgroup
+set_property package_pin "" [get_ports [list  Data]]
+place_ports {GPIO_O[4]} T15
+endgroup
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+set_property package_pin "" [get_ports [list  Data]]
+refresh_design
+place_ports {GPIO_O[4]} V15
+place_ports Data T15
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+file copy -force G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.sysdef G:/temp/yaokongqi/yaokongqi.sdk/design_1_wrapper.hdf
+
+close_hw_target
+refresh_design
+file copy -force G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.sysdef G:/temp/yaokongqi/yaokongqi.sdk/design_1_wrapper.hdf
+
+close_hw_target
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+open_hw_target
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+launch_sdk -workspace G:/temp/yaokongqi/yaokongqi.sdk -hwspec G:/temp/yaokongqi/yaokongqi.sdk/design_1_wrapper.hdf
+close_hw_target
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+open_hw_target
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+launch_sdk -workspace G:/temp/yaokongqi/yaokongqi.sdk -hwspec G:/temp/yaokongqi/yaokongqi.sdk/design_1_wrapper.hdf
+close_hw_target
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+open_hw_target
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+close_hw_target
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+open_hw_target
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+close_hw_target
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/003017A6DCC2A]
+open_hw_target
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+current_hw_device [lindex [get_hw_devices] 1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 1]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 1]
+set_property PROGRAM.FILE {G:/temp/yaokongqi/yaokongqi.runs/impl_1/design_1_wrapper.bit} [lindex [get_hw_devices] 1]
+program_hw_devices [lindex [get_hw_devices] 1]
+refresh_hw_device [lindex [get_hw_devices] 1]
+close_hw_target

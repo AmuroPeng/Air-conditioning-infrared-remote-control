@@ -1,0 +1,71 @@
+/*
+ * low.c
+ *
+ *  Created on: 2018Äê6ÔÂ7ÈÕ
+ *      Author: Lab
+ */
+#include "xparameters.h"
+#include "xstatus.h"
+#include "xuartlite.h"
+#include "xil_printf.h"
+#define UARTLITE_BASEADDR 0x42C00000
+#define TEST_BUFFER_SIZE 6
+
+
+int UartLiteLowLevelExample (u32 UartliteBaseAddress);
+
+u8 SendBuffer[TEST_BUFFER_SIZE];
+u8 RecvBuffer[TEST_BUFFER_SIZE];
+
+
+int main(void)
+{
+	int Status;
+  //  int p;
+	xil_printf("Hello\n\r");
+	Status = UartLiteLowLevelExample(UARTLITE_BASEADDR);
+
+	//	p=Xil_In8(UARTLITE_BASEADDR);
+	return XST_SUCCESS;
+}
+
+int UartLiteLowLevelExample(u32 UartliteBaseAddress)
+{
+	int Index;
+    int i,j;
+	for(Index = 0; Index < TEST_BUFFER_SIZE;Index++ )
+	{
+		SendBuffer[Index] = 0x00;
+		RecvBuffer[Index] = 0 ;
+	}
+        SendBuffer[0]=0xFD;
+
+	for(Index = 0; Index < TEST_BUFFER_SIZE;Index++ )
+		{
+		XUartLite_SendByte(UartliteBaseAddress,SendBuffer[Index]);
+		}
+	i=XUartLite_GetStatusReg((BaseAddress));
+	j=XUL_SR_RX_FIFO_VALID_DATA;
+
+	for(Index = 0; Index < TEST_BUFFER_SIZE;Index++ )
+		{
+		RecvBuffer[Index]=XUartLite_RecvByte(UartliteBaseAddress);
+		}
+	for(Index = 0; Index < TEST_BUFFER_SIZE;Index++ )
+	    {
+			xil_printf("%d",RecvBuffer[Index]);
+		}
+
+	return XST_SUCCESS;
+}
+
+
+
+
+
+
+
+
+
+
+

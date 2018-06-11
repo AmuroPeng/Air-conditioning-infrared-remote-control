@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Jun 05 15:41:15 2018
+# Process ID: 2128
+# Log file: D:/temp/ip_repo/edit_myip_v1_0.runs/synth_1/myip_v1_0.vds
+# Journal file: D:/temp/ip_repo/edit_myip_v1_0.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source myip_v1_0.tcl -notrace
+Command: synth_design -top myip_v1_0 -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 263.867 ; gain = 86.617
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'myip_v1_0' [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+ERROR: [Synth 8-439] module 'myip_v1_0_S00_AXI' not found [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:50]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+ERROR: [Synth 8-285] failed synthesizing module 'myip_v1_0' [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:4]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 298.094 ; gain = 120.844
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+3 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 05 15:41:19 2018...

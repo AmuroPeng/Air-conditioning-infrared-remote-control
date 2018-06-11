@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+	[bootloader]D:\5Project\11111\temp\yaokongqi\yaokongqi.sdk\control\Debug\control.elf
+	D:\5Project\11111\temp\yaokongqi\yaokongqi.sdk\design_1_wrapper_hw_platform_6\design_1_wrapper.bit
+	D:\5Project\11111\temp\yaokongqi\yaokongqi.sdk\nengcheng\Debug\nengcheng.elf
+}

@@ -1,0 +1,18 @@
+#include "xparameters.h"
+#include "stdio.h"
+#include "xil_io.h"
+//#define t 0x43C00000
+//#define h 0x43C00004
+
+int main(void){
+	int p,q;
+	p=Xil_In8(XPAR_MYIP_V1_0_0_BASEADDR);
+	q=Xil_In8(XPAR_MYIP_V1_0_0_BASEADDR+4);
+//	p=(int*)XPAR_MYIP_V1_0_0_BASEADDR;
+//	q=(int*)XPAR_MYIP_V1_0_0_BASEADDR + 4;
+	xil_printf("temperature:%d\n", p[1]);
+	xil_printf("wet:%d\n", q);
+
+	return 0;
+
+}

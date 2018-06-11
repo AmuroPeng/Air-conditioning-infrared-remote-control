@@ -1,0 +1,14 @@
+#include"xparameters.h"
+#include "stdio.h"
+//#define t 0x43C00000
+//#define h 0x43C00004
+
+void main(){
+	int *p,*q;
+	xil_in8(XPAR_MYIP_V1_0_0_BASEADDR);
+	p=(int*)XPAR_MYIP_V1_0_0_BASEADDR;
+	q=(int*)XPAR_MYIP_V1_0_0_BASEADDR + 4;
+	printf("温度为%d\n", *p);
+	printf("湿度为%d\n", *q);
+
+}

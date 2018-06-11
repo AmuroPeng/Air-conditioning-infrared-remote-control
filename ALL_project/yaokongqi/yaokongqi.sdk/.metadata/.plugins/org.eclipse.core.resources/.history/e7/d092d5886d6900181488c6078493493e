@@ -1,0 +1,12 @@
+#include"xparameters.h"
+#include "stdio.h"
+#define t 0x43C00000
+#define h 0x43C00004
+
+void main(){
+	int *p,*q;
+	p=(int*)t;
+	q=(int*)h;
+	printf("温度为%d\n", *p);
+	printf("湿度为%d\n", *q);
+}

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Mon Jun 04 15:12:02 2018
+# Process ID: 4668
+# Log file: D:/temp/project_2/project_2.runs/synth_1/temp_generate.vds
+# Journal file: D:/temp/project_2/project_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source temp_generate.tcl -notrace

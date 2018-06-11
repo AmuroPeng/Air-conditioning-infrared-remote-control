@@ -1,0 +1,22 @@
+#include "xparameters.h"
+#include "stdio.h"
+#include "xil_io.h"
+#include "oled.h"
+//#define t 0x43C00000
+//#define h 0x43C00004
+
+int main(void){
+	int p,q;
+	OLED_Init();
+	OLED_Clear();
+	p=Xil_In8(XPAR_MYIP_V1_0_0_BASEADDR);
+	q=Xil_In8(XPAR_MYIP_V1_0_0_BASEADDR+4);
+
+	OLED_ShowString(0, 0, "humidity:");
+	//OLED_ShowString(0, 8, p);
+	//OLED_ShowString(8, 0, "temperature:");
+	//OLED_ShowString(8, 8, q);
+	/*xil_printf("humidity:%d\t", p);
+	xil_printf("temperature:%d\n", q);*/
+	return 0;
+}

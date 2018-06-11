@@ -1,0 +1,494 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 1656
+
+Current time: 	6/5/18 3:37:35 PM CST
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1680x1050
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=SimSun,name=宋体,style=plain,size=12
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.2/tps/win64/jre
+
+User name: 	Lab
+User directory: D:/temp/ip_repo
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+Vivado preferences path: C:/Users/Lab/AppData/Roaming/Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: C:/Users/Lab/AppData/Roaming/Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	192 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 454 MB
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// cp:P (cl:JFrame):  Open Project : addNotify
+// Opening Vivado Project: D:\temp\ip_repo\edit_myip_v1_0.xpr. Version: Vivado v2015.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 48 MB (+48252kb) [00:00:03]
+// [Engine Memory]: 412 MB (+280824kb) [00:00:03]
+// [Engine Memory]: 441 MB (+8886kb) [00:00:04]
+// [GUI Memory]: 53 MB (+2493kb) [00:00:04]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project D:/temp/ip_repo/edit_myip_v1_0.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/temp/ip_repo/myip_1.0'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: edit_myip_v1_0; location: D:/temp/ip_repo; part: xc7z020clg400-1
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 463 MB. GUI used memory: 32 MB. Current time: 6/5/18 3:37:37 PM CST
+// [Engine Memory]: 466 MB (+2592kb) [00:00:08]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, T:JDialog)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Tue Jun 05 15:38:11 2018] Launched synth_1... Run output will be captured here: D:/temp/ip_repo/edit_myip_v1_0.runs/synth_1/runme.log [Tue Jun 05 15:38:11 2018] Launched impl_1... Run output will be captured here: D:/temp/ip_repo/edit_myip_v1_0.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v)]", 4); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false); // A:k (H:JPanel, cl:JFrame)
+// [GUI Memory]: 56 MB (+37kb) [00:00:52]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v)]", 4, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v)]", 4); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 488 MB. GUI used memory: 36 MB. Current time: 6/5/18 3:38:27 PM CST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTab((HResource) null, (HResource) null, "Messages", 1); // FrameContainer:JideTabbedPane (ContainerContainer:JideSplitPane, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near inout. [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0_S00_AXI.v:7]. ]", 8, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\temp\ip_repo\myip_1.0\hdl\myip_v1_0_S00_AXI.v;-;;-;16;-;line;-;7;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+// [GUI Memory]: 66 MB (+7490kb) [00:01:22]
+// Elapsed time: 18 seconds
+selectCodeEditor("myip_v1_0_S00_AXI.v", 322, 239); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-2216] Analyzing Verilog file D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v into library work [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:1]. ]", 7, true); // ae:k (JViewport:JComponent, cl:JFrame) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near inout. [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0_S00_AXI.v:7]. ]", 11, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\temp\ip_repo\myip_1.0\hdl\myip_v1_0_S00_AXI.v;-;;-;16;-;line;-;7;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+// TclEventType: RUN_FAILED
+// Q:ap (cl:JFrame): Synthesis Failed: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Synthesis Failed"); // Q:ap (cl:JFrame)
+// [GUI Memory]: 71 MB (+1374kb) [00:02:05]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v)]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v)]", 4, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// [Engine Memory]: 501 MB (+12559kb) [00:02:08]
+selectCodeEditor("myip_v1_0.v", 121, 332); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("myip_v1_0.v", 121, 332, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("myip_v1_0.v", 121, 332); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("myip_v1_0.v", 164, 332); // bj:J (JPanel:JComponent, cl:JFrame)
+// [GUI Memory]: 74 MB (+72kb) [00:02:13]
+selectCodeEditor("myip_v1_0.v", 69, 397); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("myip_v1_0.v", 69, 397, false, false, false, false, true); // bj:J (JPanel:JComponent, cl:JFrame) - Double Click
+selectCodeEditor("myip_v1_0.v", 69, 397); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("myip_v1_0.v", 69, 397); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, temp_generate (temp_generate.v)]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, temp_generate (temp_generate.v)]", 5, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v)]", 4); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+// [GUI Memory]: 79 MB (+672kb) [00:02:25]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectCodeEditor("myip_v1_0_S00_AXI.v", 130, 454); // bj:J (JPanel:JComponent, cl:JFrame)
+selectButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "run_implementation"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// aR:ah (cl:JFrame): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a:JButton (JPanel:JComponent, aR:ah)
+// cp:P (cl:JFrame):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+dismissDialog("Save Project"); // aR:ah (cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 
+// Tcl Message: [Tue Jun 05 15:40:07 2018] Launched synth_1... Run output will be captured here: D:/temp/ip_repo/edit_myip_v1_0.runs/synth_1/runme.log [Tue Jun 05 15:40:07 2018] Launched impl_1... Run output will be captured here: D:/temp/ip_repo/edit_myip_v1_0.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("myip_v1_0_S00_AXI.v", 121, 443); // bj:J (JPanel:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-806] Syntax error near inout. [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0_S00_AXI.v:7]. ]", 8, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\temp\ip_repo\myip_1.0\hdl\myip_v1_0_S00_AXI.v;-;;-;16;-;line;-;7;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+// Elapsed time: 37 seconds
+selectCodeEditor("myip_v1_0_S00_AXI.v", 129, 442); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("myip_v1_0_S00_AXI.v", 286, 442); // bj:J (JPanel:JComponent, cl:JFrame)
+// [GUI Memory]: 84 MB (+1598kb) [00:03:43]
+// TclEventType: RUN_FAILED
+// Q:ap (cl:JFrame): Synthesis Failed: addNotify
+// Elapsed time: 15 seconds
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // h:JCheckBox (JPanel:JComponent, Q:ap): TRUE
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // h:JCheckBox (JPanel:JComponent, Q:ap): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ap)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // Q:ap (cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-439] module 'myip_v1_0_S00_AXI' not found [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:50]. ]", 6, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\temp\ip_repo\myip_1.0\hdl\myip_v1_0.v;-;;-;16;-;line;-;50;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-285] failed synthesizing module 'myip_v1_0' [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:4]. ]", 7, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\temp\ip_repo\myip_1.0\hdl\myip_v1_0.v;-;;-;16;-;line;-;4;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-439] module 'myip_v1_0_S00_AXI' not found [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:50]. ]", 6, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\temp\ip_repo\myip_1.0\hdl\myip_v1_0.v;-;;-;16;-;line;-;50;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-439] module 'myip_v1_0_S00_AXI' not found [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:50]. ]", 6, false); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst - myip_v1_0_S00_AXI]", 5, false); // A:k (H:JPanel, cl:JFrame)
+// Elapsed time: 19 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Common 17-69] Command failed: Vivado Synthesis failed. ]", 8, false); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Common 17-69] Command failed: Vivado Synthesis failed. ]", 8, false, false, false, false, false, true); // ae:k (JViewport:JComponent, cl:JFrame) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-285] failed synthesizing module 'myip_v1_0' [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:4]. ]", 7, false); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-285] failed synthesizing module 'myip_v1_0' [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:4]. ]", 7, false, false, false, false, false, true); // ae:k (JViewport:JComponent, cl:JFrame) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-285] failed synthesizing module 'myip_v1_0' [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:4]. ]", 7, false); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-285] failed synthesizing module 'myip_v1_0' [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:4]. ]", 7, false); // ae:k (JViewport:JComponent, cl:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-285] failed synthesizing module 'myip_v1_0' [D:/temp/ip_repo/myip_1.0/hdl/myip_v1_0.v:4]. ]", 7, false); // ae:k (JViewport:JComponent, cl:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\temp\ip_repo\myip_1.0\hdl\myip_v1_0.v;-;;-;16;-;line;-;4;-;;-;16;-;"); // ae:k (JViewport:JComponent, cl:JFrame)
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, myip_v1_0_S00_AXI.v]", 2, false); // A:k (H:JPanel, cl:JFrame)
+// Elapsed time: 16 seconds
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // g:JideTabbedPane (O:aK, cl:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Compile Order", 2); // g:JideTabbedPane (O:aK, cl:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // g:JideTabbedPane (O:aK, cl:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Compile Order", 2); // g:JideTabbedPane (O:aK, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, component.xml]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, component.xml]", 2, false, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click
+// cp:P (cl:JFrame):  Open IP-XACT File : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::open_ipxact_file {D:\temp\ip_repo\myip_1.0\component.xml} 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+dismissDialog("Open IP-XACT File"); // cp:P (cl:JFrame)
+// [GUI Memory]: 89 MB (+359kb) [00:05:57]
+// HMemoryUtils.trashcanNow. Engine heap size: 521 MB. GUI used memory: 43 MB. Current time: 6/5/18 3:43:28 PM CST
+// TclEventType: PACKAGER_UNLOAD_CORE
+closeView(PAResourceOtoP.PAViews_PACKAGE_IP, "Package IP - myip_v1_0"); // F:aK
+closeView(PAResourceOtoP.PAViews_PACKAGE_IP, "Package IP - myip_v1_0"); // F:aK
+// Tcl Message: ipx::unload_core d:/temp/ip_repo/myip_1.0/component.xml 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, component.xml]", 2, false); // A:k (H:JPanel, cl:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Libraries", 1); // g:JideTabbedPane (O:aK, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 6, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 6, false, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger
+// [Engine Memory]: 527 MB (+235kb) [00:06:17]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 6, false); // A:k (H:JPanel, cl:JFrame)
+// Elapsed time: 17 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // X:JMenu (JPopupMenu:JComponent, cl:JFrame)
+selectMenuItem(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "D:/temp/yaokongqi/yaokongqi.xpr"); // ab:JMenuItem (JPopupMenu:JComponent, cl:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 527 MB. GUI used memory: 42 MB. Current time: 6/5/18 3:44:13 PM CST
+// Opening Vivado Project: D:/temp/yaokongqi/yaokongqi.xpr. Version: Vivado v2015.2 
+// cp:P (cl:JFrame):  Open Project : addNotify
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_Yes", "Yes"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, T:JDialog)
+// Tcl Message: close_project 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/temp/yaokongqi/yaokongqi.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [Project 1-265] Setting active simulation fileset to 'sim_1'. INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: yaokongqi; location: D:/temp/yaokongqi; part: xc7z020clg400-1
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+selectButton(PAResourceOtoP.ProjectSettingsGadget_EDIT_PROJECT_SETTINGS, "Edit"); // i:l (NullPanel:JPanel, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton("RDIResource.ProgressDialog_BACKGROUND_TASK_RUNNING_OK", "OK"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, T:JDialog)
+selectButton(PAResourceOtoP.ProjectSettingsGadget_EDIT_PROJECT_SETTINGS, "Edit"); // i:l (NullPanel:JPanel, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROJECT_SETTINGS
+// Project Settings: addNotify
+selectButton("IP", "IP"); // JideButton:JButton (ScrollableButtonPanel:ButtonPanel, k:br)
+selectButton(PAResourceOtoP.ProjectSettingsIPRepositoryPanel_ADD_REPOSITORY, "Add Repository"); // w:JideButton (CommandBar:DockableBar, k:br)
+// Elapsed time: 56 seconds
+setFolderChooser("D:/temp/ip_repo");
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  D:/temp/ip_repo [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/temp/ip_repo'. 
+// Elapsed time: 14 seconds
+selectList(PAResourceOtoP.ProjectSettingsIPRepositoryPanel_REPOSITORY_CHOOSER, "d:/temp/ip_repo", 0); // o:a (JViewport:JComponent, k:br)
+selectButton("OK", "OK"); // JButton:AbstractButton (ButtonPanel:JPanel, k:br)
+dismissDialog("Project Settings"); // k:br (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // w:Y (v:H, cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Create Block Design]", 6, false); // w:Y (v:H, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CREATE_NEW_DIAGRAM
+// aE:ag (cl:JFrame): Create Block Design: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 538 MB. GUI used memory: 44 MB. Current time: 6/5/18 3:45:43 PM CST
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aE:ag)
+// 'C' command handler elapsed time: 5 seconds
+dismissDialog("Create Block Design"); // aE:ag (cl:JFrame)
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// cp:P (cl:JFrame):  Create Block Design : addNotify
+// Tcl Message: create_bd_design "design_1" 
+// Tcl Message: Wrote  : <D:/temp/yaokongqi/yaokongqi.srcs/sources_1/bd/design_1/design_1.bd>  
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 554 MB (+792kb) [00:08:20]
+dismissDialog("Create Block Design"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 568 MB. GUI used memory: 46 MB. Current time: 6/5/18 3:45:58 PM CST
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "myip_v1_0_v1_0", 114, "myip_v1_0_v1_0", 0, false); // O:av (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "myip_v1_0_v1_0", 114, "myip_v1_0_v1_0", 0, false); // O:av (JViewport:JComponent, ResizableWindow:JWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "myip_v1_0_v1_0", 114); // O:av (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "myip_v1_0_v1_0", 114, "myip_v1_0_v1_0", 0, false, false, false, false, false, true); // O:av (JViewport:JComponent, ResizableWindow:JWindow) - Double Click
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:user:myip_v1_0:1.0 myip_v1_0_0 
+// Tcl Message: endgroup 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {0.5 -4 11} [get_bd_cells myip_v1_0_0] 
+// Elapsed time: 14 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 46, 135, 436, 570, false, false, false, true, false); // ex:aK (TdiGroup:JideTabbedPane, cl:JFrame) - Popup Trigger
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 47, 176, 436, 570, false, false, false, true, false); // ex:aK (TdiGroup:JideTabbedPane, cl:JFrame) - Popup Trigger
+// Elapsed time: 23 seconds
+selectButton(PAResourceCommand.PACommandNames_EXPAND_ALL_RSB_BLOCK, "System_expand_all_rsb_block"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "zynq"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 0, "ZYNQ7 Processing System", 0, false); // O:av (JViewport:JComponent, ResizableWindow:JWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 0); // O:av (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Processing System", 0, "ZYNQ7 Processing System", 0, false, false, false, false, false, true); // O:av (JViewport:JComponent, ResizableWindow:JWindow) - Double Click
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 
+// cp:P (cl:JFrame):  Add IP : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// [Engine Memory]: 604 MB (+24119kb) [00:09:30]
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 614 MB. GUI used memory: 47 MB. Current time: 6/5/18 3:47:03 PM CST
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1.5 768 182} [get_bd_cells myip_v1_0_0] 
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 175 234} [get_bd_cells processing_system7_0] 
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 757 45} [get_bd_cells myip_v1_0_0] 
+// Elapsed time: 12 seconds
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// [Engine Memory]: 734 MB (+104236kb) [00:09:46]
+// HMemoryUtils.trashcanNow. Engine heap size: 734 MB. GUI used memory: 49 MB. Current time: 6/5/18 3:47:18 PM CST
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "uart"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Uartlite", 1, "AXI Uartlite", 0, false); // O:av (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Uartlite", 1, "AXI Uartlite", 0, false); // O:av (JViewport:JComponent, ResizableWindow:JWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Uartlite", 1); // O:av (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Uartlite", 1, "AXI Uartlite", 0, false, false, false, false, false, true); // O:av (JViewport:JComponent, ResizableWindow:JWindow) - Double Click
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// cp:P (cl:JFrame):  Add IP : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3 912 448} [get_bd_cells axi_uartlite_0] 
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {0.5 -233 -26} [get_bd_cells processing_system7_0] 
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1.5 638 26} [get_bd_cells myip_v1_0_0] 
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 637 191} [get_bd_cells axi_uartlite_0] 
+// Elapsed time: 15 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 751, 208, 1292, 586, false, false, false, true, false); // ex:aK (TdiGroup:JideTabbedPane, cl:JFrame) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 UART 
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axi_uartlite_0/UART] [get_bd_intf_ports UART] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// T:cp (cl:JFrame):  Re-customize IP : addNotify
+// [GUI Memory]: 94 MB (+1254kb) [00:10:36]
+// t:P (cl:JFrame): Re-customize IP: addNotify
+// cn:ag (t:P): Configuration Presets: addNotify
+// Elapsed time: 28 seconds
+dismissDialog("Re-customize IP"); // T:cp (cl:JFrame)
+// Elapsed time: 41 seconds
+selectButton(PAResourceAtoD.CustomizeCoreDialog_PRESETS, "Presets"); // w:JideButton (CommandBar:DockableBar, t:P)
+selectButton(PAResourceAtoD.CustomizeCoreDialog_PRESETS, "Presets"); // w:JideButton (CommandBar:DockableBar, t:P)
+selectMenuItem(PAResourceAtoD.CustomizeCoreDialog_APPLY_CONFIGURATION, "Apply Configuration..."); // ab:JMenuItem (ai:JPopupMenu, t:P)
+// [GUI Memory]: 101 MB (+1721kb) [00:11:34]
+// [GUI Memory]: 106 MB (+329kb) [00:11:45]
+// Elapsed time: 56 seconds
+setFileChooser("C:/计算机硬件综合课程设计资料/参考资料/pynq_revC.tcl");
+// O:ah (t:P): Error Found: addNotify
+selectButton(PAResourceAtoD.CustomizeErrorDialog_OK, "OK"); // a:JButton (JPanel:JComponent, O:ah)
+dismissDialog("Error Found"); // O:ah (t:P)
+// Elapsed time: 27 seconds
+selectButton(PAResourceAtoD.CustomizeCoreDialog_PRESETS, "Presets"); // w:JideButton (CommandBar:DockableBar, t:P)
+selectMenuItem(PAResourceAtoD.CustomizeCoreDialog_APPLY_CONFIGURATION, "Apply Configuration..."); // ab:JMenuItem (ai:JPopupMenu, t:P)
+setFileChooser("D:/pynq_revC.tcl");
+// cp:P (t:P):  Apply Configuration : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 760 MB. GUI used memory: 97 MB. Current time: 6/5/18 3:50:33 PM CST
+// cn:ag (t:P): Configuration Presets: addNotify
+dismissDialog("Apply Configuration"); // cp:P (t:P)
+// Elapsed time: 31 seconds
+selectButton("PS-PL Configuration", "PS-PL Configuration"); // l:JideButton (cj:ButtonPanel, t:P)
+// [GUI Memory]: 112 MB (+650kb) [00:15:11]
+// [Engine Memory]: 775 MB (+4460kb) [00:16:53]
+// HMemoryUtils.trashcanNow. Engine heap size: 793 MB. GUI used memory: 72 MB. Current time: 6/5/18 3:56:44 PM CST
+// Elapsed time: 1949 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // X:JMenu (JPopupMenu:JComponent, cl:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // X:JMenu (JPopupMenu:JComponent, cl:JFrame)
+selectMenuItem(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "D:/temp/ip_repo/edit_myip_v1_0.xpr"); // ab:JMenuItem (JPopupMenu:JComponent, cl:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+// aR:ah (cl:JFrame): Save Project: addNotify
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_Yes", "Yes"); // BasicOptionPaneUI$ButtonFactory:JButton (JPanel:JComponent, T:JDialog)
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a:JButton (JPanel:JComponent, aR:ah)
+// cp:P (cl:JFrame):  Save Constraints : addNotify
+dismissDialog("Save Project"); // aR:ah (cl:JFrame)
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : <D:/temp/yaokongqi/yaokongqi.srcs/sources_1/bd/design_1/design_1.bd>  
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 804 MB. GUI used memory: 66 MB. Current time: 6/5/18 4:23:49 PM CST
+// Opening Vivado Project: D:/temp/ip_repo/edit_myip_v1_0.xpr. Version: Vivado v2015.2 
+// cp:P (cl:JFrame):  Open Project : addNotify
+// Tcl Message: close_project 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project D:/temp/ip_repo/edit_myip_v1_0.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/temp/ip_repo/myip_1.0'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
