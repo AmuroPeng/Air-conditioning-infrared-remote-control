@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Mon Jun 11 10:06:19 2018
+# Process ID: 12536
+# Log file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/IP_definition_999/webtalk.log
+# Journal file: D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/IP_definition_999\webtalk.jou
+#-----------------------------------------------------------
+source D:/5Project/PYNQ/Air-conditioning-infrared-remote-control/IP_definition_999/tmp_edit_project.hw/webtalk/labtool_webtalk.tcl -notrace

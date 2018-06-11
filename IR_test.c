@@ -32,6 +32,8 @@ int main()
 	Xil_Out32(XPAR_IR_V1_0_0_BASEADDR+4,b);
 	Xil_Out32(XPAR_IR_V1_0_0_BASEADDR+8,c);
 	usleep(1000000);
+	Xil_in(XPAR_IR_V1_0_0_BASEADDR+12);
+
 	}
 
 }

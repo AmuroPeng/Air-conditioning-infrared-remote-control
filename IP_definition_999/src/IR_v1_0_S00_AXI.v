@@ -260,6 +260,7 @@
 	                    end
 	        endcase
 	      end
+	      slv_reg4 <= temp_out;
 	  end
 	end    
 
@@ -393,13 +394,19 @@
 	end    
 
 	// Add user logic here
+	wire [31:0]temp_out;
     hongwai u0 (
     .clk(S_AXI_ACLK),
     .rst(S_AXI_ARESETN),
     .key_1(key_1),
     .key_2(key_2),
+    .IR_in_data35_1(slv_reg0),
+    .IR_in_data35_0(slv_reg1),
+    .IR_in_data32(slv_reg2),
+    .temp_out(slv_reg3),
     .IR_out(IR_out),
-    .led_out(led_out));
+    .led_out(led_out),
+    .temp_out(temp_out));
 	// User logic ends
 
 	endmodule

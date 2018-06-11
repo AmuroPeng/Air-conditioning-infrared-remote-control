@@ -4,16 +4,19 @@ input clk;
 input rst;
 input key_1; //
 input key_2;
-wire [31:0] IR_in_data35_1;
-wire [2:0] IR_in_data35_0;
-wire [31:0] IR_in_data32;
+input [31:0] IR_in_data35_1;
+input [2:0] IR_in_data35_0;
+input [31:0] IR_in_data32;
 output IR_out;
 output led_out; //
+output [31:0] temp_out;
 // output IR_outt;
 // output IR_outt_rev;
 
 wire IR_in_data35;
 assign IR_in_data35 = {IR_in_data35_1,IR_in_data35_0};
+
+assign temp_out = IR_in_data35[31:0];
 
 reg led;
 reg [34:0] data35;
